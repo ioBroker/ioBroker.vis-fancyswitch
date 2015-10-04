@@ -1,3 +1,10 @@
+<!--
+    ioBroker.vis fancyswitch Widget-Set
+
+    version: "0.0.2"
+
+    Copyright 2013-2015 hobbyquaker, bluefox<dogafox@gmail.com>
+-->
 <style type="text/css">
     .fancy-switch{
         border:none;
@@ -57,7 +64,15 @@
     }
 
     vis.binds.fancyswitch = {
+	    version: "0.0.2",
+		showVersion: function () {
+			if (vis.binds.fancyswitch.version) {
+				console.log('Version vis-fancyswitch:' + vis.binds.fancyswitch.version);
+				vis.binds.fancyswitch.version = null;
+			}
+		},
         fancyswitch: function (el, options) {
+			vis.binds.fancyswitch.showVersion();
             var $this = $(el).parent().find('.fancy-switch');
             var oid   = $this.attr('data-oid');
             options.valTrue = (options.valTrue === null || options.valTrue === '' || options.valTrue === undefined) ? null: options.valTrue;
@@ -125,6 +140,7 @@
             }
         },
         toggleSwitch: function (el, options) {
+ 			vis.binds.fancyswitch.showVersion();
             var $this = $(el).prev();
             console.log(JSON.stringify(options) + ' ' + $this.width());
             $this.toggleSwitch({
@@ -147,6 +163,7 @@
             }
         },
         iButton: function (el, options) {
+			vis.binds.fancyswitch.showVersion();
             var $this = $(el);
 
             setTimeout(function () {
