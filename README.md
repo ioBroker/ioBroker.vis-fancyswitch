@@ -3,6 +3,7 @@ ioBroker.vis-fancyswitch
 ============
 
 fancyswitch - Switch widgets for ioBroker.vis ported from http://papermashup.com/jquery-fancy-switch/ from @ashleyford
+
 ![Example](img/widgets.png)
 
 ## Changelog
