@@ -8,7 +8,10 @@ fancyswitch - Switch widgets for ioBroker.vis ported from http://papermashup.com
 
 ## Changelog
 
-### 0.1.0 (2015-07-09)
+### 0.0.2 (2015-10-04)
+- (bluefox) fix dependencies
+
+### 0.0.1 (2015-10-04)
 - (bluefox) initial checkin
 
 ## License
