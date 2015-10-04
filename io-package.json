@@ -1,0 +1,34 @@
+{
+    "common": {
+        "name":                     "vis-fancyswitch",
+        "version": "0.0.1",
+        "title":                    "ioBroker Visualisation - fancyswitch style Widgets",
+        "desc": {
+            "en":                   "High quality Widgets for ioBroker.vis",
+            "de":                   "High quality Widgets für ioBroker.vis",
+            "ru":                   "High quality Widgets для ioBroker.vis"
+        },
+        "platform":                 "Javascript/Node.js",
+        "loglevel":                 "info",
+        "icon":                     "fancyswitch.png",
+        "enabled":                  true,
+        "mode":                     "once",
+        "extIcon":                  "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-fancyswitch/master/admin/fancyswitch.png",
+        "keywords":                 ["fancyswitch", "vis", "GUI", "graphical", "scada"],
+        "readme":                   "https://github.com/ioBroker/ioBroker.vis-fancyswitch/blob/master/README.md",
+        "authors": [
+            "bluefox <dogafox@gmail.com>"
+        ],
+        "localLink":                "%web_protocol%://%ip%:%web_port%/vis/edit.html",
+        "license":                  "Apache 2.0",
+        "dependencies":             ["vis"],
+        "onlyWWW":                  true,
+        "singleton":                true,
+        "type":                     "vis",
+		"restartAdapters":          ["vis"]
+    },
+    "native": {
+    },
+    "instanceObjects": [
+    ]
+}
