@@ -16,7 +16,7 @@
   },
   "licenses": [
     {
-      "type": "MIT",
+      "type": "Apache 2.0",
       "url": "https://github.com/ioBroker/ioBroker.vis-fancyswitch/blob/master/LICENSE"
     }
   ],
