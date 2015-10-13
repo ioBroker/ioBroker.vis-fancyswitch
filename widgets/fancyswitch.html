@@ -1,7 +1,7 @@
 <!--
     ioBroker.vis fancyswitch Widget-Set
 
-    version: "0.0.3"
+    version: "0.1.0"
 
     Copyright 2013-2015 hobbyquaker, bluefox<dogafox@gmail.com>
 -->
@@ -64,7 +64,7 @@
     }
 
     vis.binds.fancyswitch = {
-	    version: "0.0.3",
+	    version: "0.1.0",
 		showVersion: function () {
 			if (vis.binds.fancyswitch.version) {
 				console.log('Version vis-fancyswitch:' + vis.binds.fancyswitch.version);
@@ -142,13 +142,12 @@
         toggleSwitch: function (el, options) {
  			vis.binds.fancyswitch.showVersion();
             var $this = $(el).prev();
-            console.log(JSON.stringify(options) + ' ' + $this.width());
             $this.toggleSwitch({
                 highlight: options.highlight,
-                width:     parseInt(options.width, 10) || 40,
+                width:     parseInt(options.width, 10) || 40/*,
                 change: function (e) {
                     console.log(e);
-                }
+                }*/
             });
 
             if (vis.editMode) {
@@ -169,6 +168,7 @@
             setTimeout(function () {
                 $this.iButton(options);
             }, 20);
+
             if (!options.enableFx)   options.enableFx   = false;
             if (!options.enableDrag) options.enableDrag = false;
             if (options.resizeHandle === 'false') options.resizeHandle = false;

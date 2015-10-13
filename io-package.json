@@ -1,7 +1,7 @@
 {
     "common": {
         "name":                     "vis-fancyswitch",
-        "version": "0.0.3",
+        "version": "0.1.0",
         "title":                    "ioBroker Visualisation - fancyswitch style Widgets",
         "desc": {
             "en":                   "Switch widgets for ioBroker.vis",
