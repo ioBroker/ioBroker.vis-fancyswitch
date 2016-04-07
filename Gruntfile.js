@@ -16,20 +16,16 @@ module.exports = function (grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: pkg,
-        clean: {
-            all: ['tmp/*.json', 'tmp/*.zip', 'tmp/*.jpg', 'tmp/*.jpeg', 'tmp/*.png',
-                  dstDir + '*.json', dstDir + '*.zip', dstDir + '*.jpg', dstDir + '*.jpeg', dstDir + '*.png']
-        },
         replace: {
             core: {
                 options: {
                     patterns: [
                         {
-                            match: /version: *"[\.0-9]*"/g,
+                            match: /version: *"[\.0-9]*"/,
                             replacement: 'version: "' + version + '"'
                         },
                         {
-                            match: /"version":\s*"[\.0-9]*",/g,
+                            match: /"version": *"[\.0-9]*",/g,
                             replacement: '"version": "' + version + '",'
                         },
                         {
@@ -43,8 +39,8 @@ module.exports = function (grunt) {
                         expand:  true,
                         flatten: true,
                         src:     [
-                            srcDir + 'package.json',
-                            srcDir + 'io-package.json'
+                                srcDir + 'package.json',
+                                srcDir + 'io-package.json'
                         ],
                         dest:    srcDir
                     },
@@ -52,7 +48,7 @@ module.exports = function (grunt) {
                         expand:  true,
                         flatten: true,
                         src:     [
-                            srcDir + 'widgets/' + pkg.name.substring('iobroker.vis-'.length) + '.html'
+                                srcDir + 'widgets/' + pkg.name.substring('iobroker.vis-'.length) + '.html'
                         ],
                         dest:    srcDir + 'widgets'
                     },
@@ -60,9 +56,9 @@ module.exports = function (grunt) {
                         expand:  true,
                         flatten: true,
                         src:     [
-                            srcDir + 'widgets/' + pkg.name.substring('iobroker.vis-'.length) + '/js/' + pkg.name.substring('iobroker.vis-'.length) + '.js'
+                                srcDir + 'widgets/' + pkg.name.substring('iobroker.vis-'.length) + '/js/' + pkg.name.substring('iobroker.vis-'.length)  + '.js'
                         ],
-                        dest:    srcDir + 'widgets/' + pkg.name.substring('iobroker.vis-'.length) + '/js/'
+                        dest:    srcDir + 'widgets/' + pkg.name.substring('iobroker.vis-'.length) + '/js'
                     }
                 ]
             }
@@ -107,12 +103,12 @@ module.exports = function (grunt) {
 
     grunt.registerTask('updateReadme', function () {
         var readme = grunt.file.read('README.md');
-        var pos = readme.indexOf('## Changelog\r\n');
+        var pos = readme.indexOf('## Changelog');
         if (pos != -1) {
-            var readmeStart = readme.substring(0, pos + '## Changelog\r\n'.length);
-            var readmeEnd   = readme.substring(pos + '## Changelog\r\n'.length);
+            var readmeStart = readme.substring(0, pos + '## Changelog\n'.length);
+            var readmeEnd   = readme.substring(pos + '## Changelog\n'.length);
 
-            if (iopackage.common && readme.indexOf(iopackage.common.version) == -1) {
+            if (readme.indexOf(version) == -1) {
                 var timestamp = new Date();
                 var date = timestamp.getFullYear() + '-' +
                     ("0" + (timestamp.getMonth() + 1).toString(10)).slice(-2) + '-' +
@@ -122,14 +118,14 @@ module.exports = function (grunt) {
                 if (iopackage.common.whatsNew) {
                     for (var i = 0; i < iopackage.common.whatsNew.length; i++) {
                         if (typeof iopackage.common.whatsNew[i] == 'string') {
-                            news += '* ' + iopackage.common.whatsNew[i] + '\r\n';
+                            news += '* ' + iopackage.common.whatsNew[i] + '\n';
                         } else {
-                            news += '* ' + iopackage.common.whatsNew[i].en + '\r\n';
+                            news += '* ' + iopackage.common.whatsNew[i].en + '\n';
                         }
                     }
                 }
 
-                grunt.file.write('README.md', readmeStart + '### ' + iopackage.common.version + ' (' + date + ')\r\n' + (news ? news + '\r\n\r\n' : '\r\n') + readmeEnd);
+                grunt.file.write('README.md', readmeStart + '### ' + version + ' (' + date + ')\n' + (news ? news + '\n\n' : '\n') + readmeEnd);
             }
         }
     });
@@ -138,21 +134,23 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-jscs');
     grunt.loadNpmTasks('grunt-http');
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-compress');
-    grunt.loadNpmTasks('grunt-exec');
-    grunt.loadNpmTasks('grunt-contrib-copy');
 
     grunt.registerTask('default', [
+        'exec',
         'http',
         'clean',
         'replace',
         'updateReadme',
+        'compress',
+        'copy',
         'jshint',
         'jscs'
     ]);
     grunt.registerTask('prepublish', [
-        'http',
-        'replace'
+        'replace',
+		'updateReadme'
+    ]);
+	grunt.registerTask('p', [
+        'prepublish'
     ]);
 };

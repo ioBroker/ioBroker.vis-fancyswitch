@@ -1,7 +1,7 @@
 {
     "common": {
         "name":                     "vis-fancyswitch",
-        "version": "0.1.0",
+        "version": "1.0.0",
         "title":                    "ioBroker Visualisation - fancyswitch style Widgets",
         "desc": {
             "en":                   "Switch widgets for ioBroker.vis",
@@ -25,7 +25,8 @@
         "onlyWWW":                  true,
         "singleton":                true,
         "type":                     "vis",
-		"restartAdapters":          ["vis"]
+		"restartAdapters":          ["vis"],
+		"noConfig":                 true
     },
     "native": {
 		"dependencies":          ["basic"]
