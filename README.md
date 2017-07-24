@@ -12,6 +12,9 @@ fancyswitch - Switch widgets for ioBroker.vis ported from http://papermashup.com
 
 ## Changelog
 
+### 1.1.0 (2016-07-17)
+- (Apollon77) Enhance handling of boolean and textual values for on/off
+
 ### 1.0.0 (2016-04-07)
 - (bluefox) fix button Giva Labs iButton (other widgets did not work)
 

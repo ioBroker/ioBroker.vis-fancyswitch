@@ -13,6 +13,7 @@
         height:46px;
         padding:0;
         margin:0;
+        white-space: nowrap;
     }
 
     .fancy-on, .fancy-off{
@@ -76,17 +77,44 @@
             var $this = $(el).parent().find('.fancy-switch');
             var oid   = $this.attr('data-oid');
             options.valTrue = (options.valTrue === null || options.valTrue === '' || options.valTrue === undefined) ? null: options.valTrue;
+            options.valFalse = (options.valFalse === null || options.valFalse === '' || options.valFalse === undefined) ? null: options.valFalse;
+            if (options.valTrue === null) options.valTrue = 1;
+            if (options.valTrue === "true") options.valTrue = true;
+            if (options.valTrue === "false") options.valTrue = false;
+            if (options.valFalse === null) options.valFalse = 0;
+            if (options.valFalse === "true") options.valFalse = true;
+            if (options.valFalse === "false") options.valFalse = false;
             if (oid && oid != 'nothing_selected') {
                 vis.states.bind(oid + '.val', function (e, newVal, oldVal) {
-                    if (newVal === null || newVal === undefined) newVal = (options.valFalse || 0);
-                    var num = parseFloat(newVal);
-                    num = (num > 0 || (options.valTrue === null && (newVal === 'true' || newVal === true)) || newVal.toString() === options.valTrue);
+                    if (newVal === null || newVal === undefined) newVal = options.valFalse;
+                    var num = newVal;
+                    if (num === "true") num = true;
+                    if (num === "false") num = false;
+                    if (num !== true && num !== false) {
+                        if (typeof num === 'string') {
+                            var f = parseFloat(num);
+                            if (f == num) {
+                                num = f;
+                            }
+                        }
+                        if ((typeof num === 'number' && num > 0) || (options.valTrue === 1 && newVal === true) || newVal.toString() === options.valTrue) {
+                            num = true;
+                        }
+                        else {
+                            num = false;
+                        }
+                    }
+                    else {
+                        if (num === options.valTrue) num = true;
+                            else num = false;
+                    }
+
                     if (options.invert) {
-                        num = num ? (options.valFalse || 0) : ((options.valTrue === null) ? 0 : options.valTrue);
+                        num = !num;
                     }
                     $this.css('background-position', num ? 'left' : 'right');
-                    $this.find('input.fancy-on_off[value="' + (options.valFalse || 0) + '"]').prop('checked', !num);
-                    $this.find('input.fancy-on_off[value="' + ((options.valTrue === null) ? 1 : options.valTrue) + '"]').prop('checked', num);
+                    $this.find('input.fancy-on_off[value="' + options.valFalse + '"]').prop('checked', !num);
+                    $this.find('input.fancy-on_off[value="' + options.valTrue + '"]').prop('checked', num);
                 });
             }
             $this.css('background', 'url("' + options.src + '")');
@@ -94,46 +122,69 @@
             $this.find('.fancy-on, .fancy-off').css('text-indent', '-10000px');
 
             var newVal = vis.states.attr(oid + '.val');
-            if (newVal === null || newVal === undefined) newVal = (options.valFalse || 0);
-            var num = parseFloat(newVal);
-            num = (num > 0 || (options.valTrue === null && (newVal === 'true' || newVal === true)) || newVal.toString() === options.valTrue);
+            if (newVal === null || newVal === undefined) newVal = options.valFalse;
+            var num = newVal;
+            if (num === "true") num = true;
+            if (num === "false") num = false;
+            if (num !== true && num !== false) {
+                if (typeof num === 'string') {
+                    var f = parseFloat(num);
+                    if (f == num) {
+                        num = f;
+                    }
+                }
+                if ((typeof num === 'number' && num > 0) || (options.valTrue === 1 && newVal === true) || newVal.toString() === options.valTrue) {
+                    num = true;
+                }
+                else {
+                    num = false;
+                }
+            }
+            else {
+                if (num === options.valTrue) num = true;
+                    else num = false;
+            }
             if (options.invert) {
-                num = num ? (options.valFalse || 0) : ((options.valTrue === null) ? 1 : options.valTrue);
+                num = !num;
             }
-            if (num) {
-                $this.css('background-position', 'left');
-            } else {
-                $this.css('background-position', 'right');
-            }
+            $this.css('background-position', num ? 'left' : 'right');
 
             if (!vis.editMode && oid && oid != 'nothing_selected') {
                 options.autoOff = parseInt(options.autoOff, 10) || 0;
 
                 $this.find("input.fancy-on_off").change(function() {
                     var newVal = $(this).val();
-                    var num = parseFloat(newVal);
-                    num = (num > 0 || (options.valTrue === null && (newVal === 'true' || newVal === true)) || newVal.toString() === options.valTrue);
+                    if (newVal === null || newVal === undefined) newVal = options.valFalse;
+                    var num = newVal;
+                    if (num === "true") num = true;
+                    if (num === "false") num = false;
+                    if (num !== true && num !== false) {
+                        if (typeof num === 'string') {
+                            var f = parseFloat(num);
+                            if (f == num) {
+                                num = f;
+                            }
+                        }
+                        if ((typeof num === 'number' && num > 0) || (options.valTrue === 1 && newVal === true) || newVal.toString() === options.valTrue) {
+                            num = true;
+                        }
+                        else {
+                            num = false;
+                        }
+                    }
+                    else {
+                        if (num === options.valTrue) num = true;
+                            else num = false;
+                    }
+                    if (options.invert) {
+                        num = !num;
+                    }
 
                     $this.css('background-position', num ? 'left' : 'right');
-                    if (options.invert) {
-                        num = num ? (options.valFalse || 0) : ((options.valTrue === null) ? 1 : options.valTrue);
-                    } else {
-                        num = newVal;
-                    }
-                    if (num === 'true')  num = true;
-                    if (num === 'false') num = false;
-                    if (parseFloat(num).toString() == num) num = parseFloat(num);
-
-                    vis.setValue(oid, num);
+                    vis.setValue(oid, num ? options.valTrue : options.valFalse);
                     if (options.autoOff) {
                         setTimeout(function () {
-                            num = num ? (options.valFalse || 0) : ((options.valTrue === null) ? 1 : options.valTrue);
-
-                            if (num === 'true')  num = true;
-                            if (num === 'false') num = false;
-                            if (parseFloat(num).toString() == num) num = parseFloat(num);
-
-                            vis.setValue(oid, num);
+                            vis.setValue(oid, num ? options.valFalse : options.valTrue);
                         }, options.autoOff);
                     }
                 });
@@ -205,7 +256,7 @@
     <div class="vis-widget <%== this.data.attr('class') %>" style="width:105px; height:46px;" id="<%= this.data.attr('wid') %>">
         <div class="vis-widget-body">
             <fieldset id="<%= this.data.attr('wid') %>_fancy" class="fancy-switch" data-oid="<%= this.data.attr('oid') %>">
-                <label class="fancy-off">Off<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= this.data.attr('valFalse') || 0 %>"/></label>
+                <label class="fancy-off">Off<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= (this.data.attr('valFalse') !== undefined) ? this.data.attr('valFalse') : 0 %>"/></label>
                 <label class="fancy-on">On<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= (this.data.attr('valTrue') === '' || this.data.attr('valTrue') === null || this.data.attr('valTrue') === undefined) ? 1 : this.data.attr('valTrue') %>"/></label>
             </fieldset>
             <div <%= (el) -> vis.binds.fancyswitch.fancyswitch(el, {src: "widgets/fancyswitch/img/fancyswitch-1.png", invert: data.attr('invert'), valTrue: this.data.attr('valTrue'), valFalse: this.data.attr('valFalse'), autoOff: this.data.attr('autoOff')}) %>></div>
@@ -224,7 +275,7 @@
     <div class="vis-widget <%== this.data.attr('class') %>" style="width:105px; height:46px;" id="<%= this.data.attr('wid') %>">
         <div class="vis-widget-body">
             <fieldset id="<%= this.data.attr('wid') %>_fancy" class="fancy-switch" data-oid="<%= this.data.attr('oid') %>">
-                <label class="fancy-off">Off<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= this.data.attr('valFalse') || 0 %>"/></label>
+                <label class="fancy-off">Off<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= (this.data.attr('valFalse') !== undefined) ? this.data.attr('valFalse') : 0 %>"/></label>
                 <label class="fancy-on">On<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= (this.data.attr('valTrue') === '' || this.data.attr('valTrue') === null || this.data.attr('valTrue') === undefined) ? 1 : this.data.attr('valTrue') %>"/></label>
             </fieldset>
             <div <%= (el) -> vis.binds.fancyswitch.fancyswitch(el, {src: "widgets/fancyswitch/img/fancyswitch-2.png", invert: data.attr('invert'), valTrue: this.data.attr('valTrue'), valFalse: this.data.attr('valFalse'), autoOff: this.data.attr('autoOff')}) %>></div>
@@ -243,7 +294,7 @@
     <div class="vis-widget <%== this.data.attr('class') %>" style="width:105px; height:46px;" id="<%= this.data.attr('wid') %>">
         <div class="vis-widget-body">
             <fieldset id="<%= this.data.attr('wid') %>_fancy" class="fancy-switch" data-oid="<%= this.data.attr('oid') %>">
-                <label class="fancy-off">Off<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= this.data.attr('valFalse') || 0 %>"/></label>
+                <label class="fancy-off">Off<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= (this.data.attr('valFalse') !== undefined) ? this.data.attr('valFalse') : 0 %>"/></label>
                 <label class="fancy-on">On<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= (this.data.attr('valTrue') === '' || this.data.attr('valTrue') === null || this.data.attr('valTrue') === undefined) ? 1 : this.data.attr('valTrue') %>"/></label>
             </fieldset>
             <div <%= (el) -> vis.binds.fancyswitch.fancyswitch(el, {src: "widgets/fancyswitch/img/fancyswitch-3.png", invert: data.attr('invert'), valTrue: this.data.attr('valTrue'), valFalse: this.data.attr('valFalse'), autoOff: this.data.attr('autoOff')}) %>></div>
@@ -262,7 +313,7 @@
     <div class="vis-widget <%== this.data.attr('class') %>" style="width:105px; height:46px;" id="<%= this.data.attr('wid') %>">
         <div class="vis-widget-body">
             <fieldset id="<%= this.data.attr('wid') %>_fancy" class="fancy-switch" data-oid="<%= this.data.attr('oid') %>">
-                <label class="fancy-off">Off<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= this.data.attr('valFalse') || 0 %>"/></label>
+                <label class="fancy-off">Off<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= (this.data.attr('valFalse') !== undefined) ? this.data.attr('valFalse') : 0 %>"/></label>
                 <label class="fancy-on">On<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= (this.data.attr('valTrue') === '' || this.data.attr('valTrue') === null || this.data.attr('valTrue') === undefined) ? 1 : this.data.attr('valTrue') %>"/></label>
             </fieldset>
             <div <%= (el) -> vis.binds.fancyswitch.fancyswitch(el, {src: "widgets/fancyswitch/img/fancyswitch-4.png", invert: data.attr('invert'), valTrue: this.data.attr('valTrue'), valFalse: this.data.attr('valFalse'), autoOff: this.data.attr('autoOff')}) %>></div>
@@ -281,7 +332,7 @@
     <div class="vis-widget <%== this.data.attr('class') %>" style="width:105px; height:46px;" id="<%= this.data.attr('wid') %>">
         <div class="vis-widget-body">
             <fieldset id="<%= this.data.attr('wid') %>_fancy" class="fancy-switch" data-oid="<%= this.data.attr('oid') %>">
-                <label class="fancy-off">Off<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= this.data.attr('valFalse') || 0 %>"/></label>
+                <label class="fancy-off">Off<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= (this.data.attr('valFalse') !== undefined) ? this.data.attr('valFalse') : 0 %>"/></label>
                 <label class="fancy-on">On<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= (this.data.attr('valTrue') === '' || this.data.attr('valTrue') === null || this.data.attr('valTrue') === undefined) ? 1 : this.data.attr('valTrue') %>"/></label>
             </fieldset>
             <div <%= (el) -> vis.binds.fancyswitch.fancyswitch(el, {src: data.attr('lightStyle') ? "widgets/fancyswitch/img/fancyswitch-6.png" : "widgets/fancyswitch/img/fancyswitch-5.png", invert: data.attr('invert'), valTrue: this.data.attr('valTrue'), valFalse: this.data.attr('valFalse'), autoOff: this.data.attr('autoOff')}) %>></div>

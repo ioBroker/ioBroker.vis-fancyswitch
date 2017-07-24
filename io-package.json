@@ -1,8 +1,20 @@
 {
     "common": {
         "name":                     "vis-fancyswitch",
-        "version": "1.0.0",
+        "version":                  "1.1.0",
         "title":                    "ioBroker Visualisation - fancyswitch style Widgets",
+        "news": {
+            "1.1.0": {
+                "en": "Enhance handling of boolean and textual values for on/off",
+                "de": "Behandlung von Boolean und Zeichenketten als Werte für Ein/Aus verbessert",
+                "ru": "Enhance handling of boolean and textual values for on/off"
+            },
+            "1.0.0": {
+                "en": "fix button Giva Labs iButton (other widgets did not work)",
+                "de": "fix button Giva Labs iButton (other widgets did not work)",
+                "ru": "fix button Giva Labs iButton (other widgets did not work)"
+            }
+        },
         "desc": {
             "en":                   "Switch widgets for ioBroker.vis",
             "de":                   "Schalter und Wippe-Widgets für ioBroker.vis",
