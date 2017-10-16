@@ -1,8 +1,8 @@
 {
     "common": {
-        "name":                     "vis-fancyswitch",
-        "version":                  "1.1.0",
-        "title":                    "ioBroker Visualisation - fancyswitch style Widgets",
+        "name": "vis-fancyswitch",
+        "version": "1.1.0",
+        "title": "ioBroker Visualisation - fancyswitch style Widgets",
         "news": {
             "1.1.0": {
                 "en": "Enhance handling of boolean and textual values for on/off",
@@ -16,33 +16,44 @@
             }
         },
         "desc": {
-            "en":                   "Switch widgets for ioBroker.vis",
-            "de":                   "Schalter und Wippe-Widgets für ioBroker.vis",
-            "ru":                   "Переключатели для ioBroker.vis"
+            "en": "Switch widgets for ioBroker.vis",
+            "de": "Schalter und Wippe-Widgets für ioBroker.vis",
+            "ru": "Переключатели для ioBroker.vis"
         },
-        "platform":                 "Javascript/Node.js",
-        "loglevel":                 "info",
-        "icon":                     "fancyswitch.png",
-        "enabled":                  true,
-        "mode":                     "once",
-        "extIcon":                  "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-fancyswitch/master/admin/fancyswitch.png",
-        "keywords":                 ["fancyswitch", "vis", "GUI", "graphical", "scada"],
-        "readme":                   "https://github.com/ioBroker/ioBroker.vis-fancyswitch/blob/master/README.md",
+        "platform": "Javascript/Node.js",
+        "loglevel": "info",
+        "icon": "fancyswitch.png",
+        "enabled": true,
+        "mode": "once",
+        "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-fancyswitch/master/admin/fancyswitch.png",
+        "keywords": [
+            "fancyswitch",
+            "vis",
+            "GUI",
+            "graphical",
+            "scada"
+        ],
+        "readme": "https://github.com/ioBroker/ioBroker.vis-fancyswitch/blob/master/README.md",
         "authors": [
             "bluefox <dogafox@gmail.com>"
         ],
-        "localLink":                "%web_protocol%://%ip%:%web_port%/vis/edit.html",
-        "license":                  "Apache 2.0",
-        "dependencies":             ["vis"],
-        "onlyWWW":                  true,
-        "singleton":                true,
-        "type":                     "vis",
-		"restartAdapters":          ["vis"],
-		"noConfig":                 true
+        "localLink": "%web_protocol%://%ip%:%web_port%/vis/edit.html",
+        "license": "Apache 2.0",
+        "dependencies": [
+            "vis"
+        ],
+        "onlyWWW": true,
+        "singleton": true,
+        "type": "visualization-widgets",
+        "restartAdapters": [
+            "vis"
+        ],
+        "noConfig": true
     },
     "native": {
-		"dependencies":          ["basic"]
+        "dependencies": [
+            "basic"
+        ]
     },
-    "instanceObjects": [
-    ]
+    "instanceObjects": []
 }
