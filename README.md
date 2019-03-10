@@ -1,7 +1,7 @@
 ![Logo](admin/fancyswitch.png)
 ioBroker.vis-fancyswitch
 ============
-[![NPM version](http://img.shields.io/npm/v/iobroker.vis-fancyswitch.svg)](https://www.npmjs.com/package/iobroker.vis-fancyswitch)
+![Number of Installations](http://iobroker.live/badges/vis-fancyswitch-installed.svg) ![Number of Installations](http://iobroker.live/badges/vis-fancyswitch-stable.svg) [![NPM version](http://img.shields.io/npm/v/iobroker.vis-fancyswitch.svg)](https://www.npmjs.com/package/iobroker.vis-fancyswitch)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.vis-fancyswitch.svg)](https://www.npmjs.com/package/iobroker.vis-fancyswitch)
 
 [![NPM](https://nodei.co/npm/iobroker.vis-fancyswitch.png?downloads=true)](https://nodei.co/npm/iobroker.vis-fancyswitch/)
