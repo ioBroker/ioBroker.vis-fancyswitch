@@ -38,7 +38,10 @@
             "bluefox <dogafox@gmail.com>"
         ],
         "localLink": "%web_protocol%://%ip%:%web_port%/vis/edit.html",
-        "license": "Apache 2.0",
+        "licenseInformation": {
+            "type": "free",
+            "license": "Apache 2.0"
+        },
         "dependencies": [
             "vis"
         ],
