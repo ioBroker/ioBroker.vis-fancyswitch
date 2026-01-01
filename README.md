@@ -28,5 +28,5 @@ fancyswitch - Switch widgets for ioBroker.vis ported from http://papermashup.com
 - (bluefox) initial checkin
 
 ## License
- Copyright (c) 2013-2016 hobbyquaker https://github.com/hobbyquaker, bluefox https://github.com/GermanBluefox
+ Copyright (c) 2013-2026 hobbyquaker https://github.com/hobbyquaker, bluefox https://github.com/GermanBluefox
  Apache 2.0
