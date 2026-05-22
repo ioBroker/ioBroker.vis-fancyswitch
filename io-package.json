@@ -1,59 +1,61 @@
 {
-    "common": {
-        "name": "vis-fancyswitch",
-        "version": "1.1.0",
-        "title": "ioBroker Visualisation - fancyswitch style Widgets",
-        "news": {
-            "1.1.0": {
-                "en": "Enhance handling of boolean and textual values for on/off",
-                "de": "Behandlung von Boolean und Zeichenketten als Werte für Ein/Aus verbessert",
-                "ru": "Enhance handling of boolean and textual values for on/off"
-            },
-            "1.0.0": {
-                "en": "fix button Giva Labs iButton (other widgets did not work)",
-                "de": "fix button Giva Labs iButton (other widgets did not work)",
-                "ru": "fix button Giva Labs iButton (other widgets did not work)"
-            }
-        },
-        "desc": {
-            "en": "Switch widgets for ioBroker.vis",
-            "de": "Schalter und Wippe-Widgets für ioBroker.vis",
-            "ru": "Переключатели для ioBroker.vis"
-        },
-        "platform": "Javascript/Node.js",
-        "loglevel": "info",
-        "icon": "fancyswitch.png",
-        "enabled": true,
-        "mode": "once",
-        "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-fancyswitch/master/admin/fancyswitch.png",
-        "keywords": [
-            "fancyswitch",
-            "vis",
-            "GUI",
-            "graphical",
-            "scada"
-        ],
-        "readme": "https://github.com/ioBroker/ioBroker.vis-fancyswitch/blob/master/README.md",
-        "authors": [
-            "bluefox <dogafox@gmail.com>"
-        ],
-        "localLink": "%web_protocol%://%ip%:%web_port%/vis/edit.html",
-        "license": "Apache 2.0",
-        "dependencies": [
-            "vis"
-        ],
-        "onlyWWW": true,
-        "singleton": true,
-        "type": "visualization-widgets",
-        "restartAdapters": [
-            "vis"
-        ],
-        "noConfig": true
+  "common": {
+    "name": "vis-fancyswitch",
+    "version": "1.1.0",
+    "title": "ioBroker Visualisation - fancyswitch style Widgets",
+    "news": {
+      "1.1.0": {
+        "en": "Enhance handling of boolean and textual values for on/off",
+        "de": "Behandlung von Boolean und Zeichenketten als Werte für Ein/Aus verbessert",
+        "ru": "Enhance handling of boolean and textual values for on/off"
+      },
+      "1.0.0": {
+        "en": "fix button Giva Labs iButton (other widgets did not work)",
+        "de": "fix button Giva Labs iButton (other widgets did not work)",
+        "ru": "fix button Giva Labs iButton (other widgets did not work)"
+      }
     },
-    "native": {
-        "dependencies": [
-            "basic"
-        ]
+    "desc": {
+      "en": "Switch widgets for ioBroker.vis",
+      "de": "Schalter und Wippe-Widgets für ioBroker.vis",
+      "ru": "Переключатели для ioBroker.vis"
     },
-    "instanceObjects": []
+    "platform": "Javascript/Node.js",
+    "loglevel": "info",
+    "icon": "fancyswitch.png",
+    "enabled": true,
+    "mode": "once",
+    "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-fancyswitch/master/admin/fancyswitch.png",
+    "keywords": [
+      "fancyswitch",
+      "vis",
+      "GUI",
+      "graphical",
+      "scada"
+    ],
+    "readme": "https://github.com/ioBroker/ioBroker.vis-fancyswitch/blob/master/README.md",
+    "authors": [
+      "bluefox <dogafox@gmail.com>"
+    ],
+    "localLink": "%web_protocol%://%ip%:%web_port%/vis/edit.html",
+    "license": "Apache 2.0",
+    "dependencies": [
+      "vis"
+    ],
+    "onlyWWW": true,
+    "singleton": true,
+    "type": "visualization-widgets",
+    "restartAdapters": [
+      "vis"
+    ],
+    "adminUI": {
+      "config": "none"
+    }
+  },
+  "native": {
+    "dependencies": [
+      "basic"
+    ]
+  },
+  "instanceObjects": []
 }
