@@ -1,9 +1,11 @@
 <!--
     ioBroker.vis fancyswitch Widget-Set
 
-    version: "1.0.0"
+    version: "1.1.0"
 
-    Copyright 2013-2015 hobbyquaker, bluefox<dogafox@gmail.com>
+    Copyright 2013-2026 hobbyquaker, bluefox <dogafox@gmail.com>
+
+    The switch images are generated from `src-widgets/src/Components/fancyArt.ts` - see `npm run assets`.
 -->
 <style type="text/css">
     .fancy-switch{
@@ -65,7 +67,7 @@
     }
 
     vis.binds.fancyswitch = {
-	    version: "1.0.0",
+	    version: "1.1.0",
 		showVersion: function () {
 			if (vis.binds.fancyswitch.version) {
 				console.log('Version vis-fancyswitch:' + vis.binds.fancyswitch.version);
@@ -248,7 +250,7 @@
 <script id="tplFancySwitch1"
         type="text/ejs"
         class="vis-tpl"
-        data-vis-prev='<div id="prev_tplFancySwitch1" style=" position: relative; text-align: initial;padding: 4px "><div class="vis-widget_prev" style="width: 104px; height: 40px; left: 179.5px; top: 46px; position: absolute;" > <div class="vis-widget-prev-body"> <fieldset class="fancy-switch" data-o style="background-image: url(widgets/fancyswitch/img/fancyswitch-1.png); background-position: 100% 50%; background-repeat: initial initial;"> <label class="fancy-off" style="text-indent: -10000px;">Off<input type="radio" class="fancy-on_off" name="w00004_on_off" value="0" style="display: none;"></label> <label class="fancy-on" style="text-indent: -10000px;">On<input type="radio" class="fancy-on_off" name="w00004_on_off" value="1" style="display: none;"></label> </fieldset> <div></div> </div> </div>'
+        data-vis-prev='<div id="prev_tplFancySwitch1" style=" position: relative; text-align: initial;padding: 4px "><div class="vis-widget_prev" style="width: 104px; height: 40px; left: 179.5px; top: 46px; position: absolute;" > <div class="vis-widget-prev-body"> <fieldset class="fancy-switch" data-o style="background-image: url(widgets/fancyswitch/img/fancyswitch-1.svg); background-position: 100% 50%; background-repeat: initial initial;"> <label class="fancy-off" style="text-indent: -10000px;">Off<input type="radio" class="fancy-on_off" name="w00004_on_off" value="0" style="display: none;"></label> <label class="fancy-on" style="text-indent: -10000px;">On<input type="radio" class="fancy-on_off" name="w00004_on_off" value="1" style="display: none;"></label> </fieldset> <div></div> </div> </div>'
         data-vis-set="fancyswitch"
         data-vis-type="ctrl - Bool"
         data-vis-name="Switch light Off/On"
@@ -259,7 +261,7 @@
                 <label class="fancy-off">Off<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= (this.data.attr('valFalse') !== undefined) ? this.data.attr('valFalse') : 0 %>"/></label>
                 <label class="fancy-on">On<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= (this.data.attr('valTrue') === '' || this.data.attr('valTrue') === null || this.data.attr('valTrue') === undefined) ? 1 : this.data.attr('valTrue') %>"/></label>
             </fieldset>
-            <div <%= (el) -> vis.binds.fancyswitch.fancyswitch(el, {src: "widgets/fancyswitch/img/fancyswitch-1.png", invert: data.attr('invert'), valTrue: this.data.attr('valTrue'), valFalse: this.data.attr('valFalse'), autoOff: this.data.attr('autoOff')}) %>></div>
+            <div <%= (el) -> vis.binds.fancyswitch.fancyswitch(el, {src: "widgets/fancyswitch/img/fancyswitch-1.svg", invert: data.attr('invert'), valTrue: this.data.attr('valTrue'), valFalse: this.data.attr('valFalse'), autoOff: this.data.attr('autoOff')}) %>></div>
         </div>
     </div>
 </script>
@@ -267,7 +269,7 @@
 <script id="tplFancySwitch2"
         type="text/ejs"
         class="vis-tpl"
-        data-vis-prev='<div id="prev_tplFancySwitch2" style=" position: relative; text-align: initial;padding: 4px "><div class="vis-widget_prev ui-selectee" style="width: 105px; height: 46px; left: 408px; top: 404px;" > <div class="vis-widget-prev-body"> <fieldset class="fancy-switch" data-o style="background-image: url(widgets/fancyswitch/img/fancyswitch-2.png); background-position: 100% 50%; background-repeat: initial initial;"> <label class="fancy-off" style="text-indent: -10000px;">Off<input type="radio" class="fancy-on_off" name="w00005_on_off" value="0" style="display: none;"></label> <label class="fancy-on" style="text-indent: -10000px;">On<input type="radio" class="fancy-on_off" name="w00005_on_off" value="1" style="display: none;"></label> </fieldset> <div></div> </div> </div>'
+        data-vis-prev='<div id="prev_tplFancySwitch2" style=" position: relative; text-align: initial;padding: 4px "><div class="vis-widget_prev ui-selectee" style="width: 105px; height: 46px; left: 408px; top: 404px;" > <div class="vis-widget-prev-body"> <fieldset class="fancy-switch" data-o style="background-image: url(widgets/fancyswitch/img/fancyswitch-2.svg); background-position: 100% 50%; background-repeat: initial initial;"> <label class="fancy-off" style="text-indent: -10000px;">Off<input type="radio" class="fancy-on_off" name="w00005_on_off" value="0" style="display: none;"></label> <label class="fancy-on" style="text-indent: -10000px;">On<input type="radio" class="fancy-on_off" name="w00005_on_off" value="1" style="display: none;"></label> </fieldset> <div></div> </div> </div>'
         data-vis-set="fancyswitch"
         data-vis-type="ctrl - Bool"
         data-vis-name="Slider dark Off/On"
@@ -278,7 +280,7 @@
                 <label class="fancy-off">Off<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= (this.data.attr('valFalse') !== undefined) ? this.data.attr('valFalse') : 0 %>"/></label>
                 <label class="fancy-on">On<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= (this.data.attr('valTrue') === '' || this.data.attr('valTrue') === null || this.data.attr('valTrue') === undefined) ? 1 : this.data.attr('valTrue') %>"/></label>
             </fieldset>
-            <div <%= (el) -> vis.binds.fancyswitch.fancyswitch(el, {src: "widgets/fancyswitch/img/fancyswitch-2.png", invert: data.attr('invert'), valTrue: this.data.attr('valTrue'), valFalse: this.data.attr('valFalse'), autoOff: this.data.attr('autoOff')}) %>></div>
+            <div <%= (el) -> vis.binds.fancyswitch.fancyswitch(el, {src: "widgets/fancyswitch/img/fancyswitch-2.svg", invert: data.attr('invert'), valTrue: this.data.attr('valTrue'), valFalse: this.data.attr('valFalse'), autoOff: this.data.attr('autoOff')}) %>></div>
         </div>
     </div>
 </script>
@@ -286,7 +288,7 @@
 <script id="tplFancyDarkAnAus"
         type="text/ejs"
         class="vis-tpl"
-        data-vis-prev='<div id="prev_tplFancyDarkAnAus" style=" position: relative; text-align: initial;padding: 4px "><div class="vis-widget_prev" style="width: 105px; height: 46px; left: 136px; top: 613px;" > <div class="vis-widget-prev-body"> <fieldset class="fancy-switch" data-o style="background-image: url(widgets/fancyswitch/img/fancyswitch-3.png); background-position: 100% 50%; background-repeat: initial initial;"> <label class="fancy-off" style="text-indent: -10000px;">Off<input type="radio" class="fancy-on_off" name="w00006_on_off" value="0" style="display: none;"></label> <label class="fancy-on" style="text-indent: -10000px;">On<input type="radio" class="fancy-on_off" name="w00006_on_off" value="1" style="display: none;"></label> </fieldset> <div></div> </div> </div>'
+        data-vis-prev='<div id="prev_tplFancyDarkAnAus" style=" position: relative; text-align: initial;padding: 4px "><div class="vis-widget_prev" style="width: 105px; height: 46px; left: 136px; top: 613px;" > <div class="vis-widget-prev-body"> <fieldset class="fancy-switch" data-o style="background-image: url(widgets/fancyswitch/img/fancyswitch-3.svg); background-position: 100% 50%; background-repeat: initial initial;"> <label class="fancy-off" style="text-indent: -10000px;">Off<input type="radio" class="fancy-on_off" name="w00006_on_off" value="0" style="display: none;"></label> <label class="fancy-on" style="text-indent: -10000px;">On<input type="radio" class="fancy-on_off" name="w00006_on_off" value="1" style="display: none;"></label> </fieldset> <div></div> </div> </div>'
         data-vis-set="fancyswitch"
         data-vis-type="ctrl - Bool"
         data-vis-name="Schieber dunkel Ein/Aus"
@@ -297,7 +299,7 @@
                 <label class="fancy-off">Off<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= (this.data.attr('valFalse') !== undefined) ? this.data.attr('valFalse') : 0 %>"/></label>
                 <label class="fancy-on">On<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= (this.data.attr('valTrue') === '' || this.data.attr('valTrue') === null || this.data.attr('valTrue') === undefined) ? 1 : this.data.attr('valTrue') %>"/></label>
             </fieldset>
-            <div <%= (el) -> vis.binds.fancyswitch.fancyswitch(el, {src: "widgets/fancyswitch/img/fancyswitch-3.png", invert: data.attr('invert'), valTrue: this.data.attr('valTrue'), valFalse: this.data.attr('valFalse'), autoOff: this.data.attr('autoOff')}) %>></div>
+            <div <%= (el) -> vis.binds.fancyswitch.fancyswitch(el, {src: "widgets/fancyswitch/img/fancyswitch-3.svg", invert: data.attr('invert'), valTrue: this.data.attr('valTrue'), valFalse: this.data.attr('valFalse'), autoOff: this.data.attr('autoOff')}) %>></div>
         </div>
     </div>
 </script>
@@ -305,7 +307,7 @@
 <script id="tplFancyDarkAnAusRev"
         type="text/ejs"
         class="vis-tpl"
-        data-vis-prev='<div id="prev_tplFancyDarkAnAusRev" style=" position: relative; text-align: initial;padding: 4px "><div class="vis-widget_prev" style="width: 105px; height: 46px; left: 278px; top: 527px;" > <div class="vis-widget-prev-body"> <fieldset class="fancy-switch" data-o style="background-image: url(widgets/fancyswitch/img/fancyswitch-4.png); background-position: 100% 50%; background-repeat: initial initial;"> <label class="fancy-off" style="text-indent: -10000px;">Off<input type="radio" class="fancy-on_off" name="w00007_on_off" value="0" style="display: none;"></label> <label class="fancy-on" style="text-indent: -10000px;">On<input type="radio" class="fancy-on_off" name="w00007_on_off" value="1" style="display: none;"></label> </fieldset> <div></div> </div> </div>'
+        data-vis-prev='<div id="prev_tplFancyDarkAnAusRev" style=" position: relative; text-align: initial;padding: 4px "><div class="vis-widget_prev" style="width: 105px; height: 46px; left: 278px; top: 527px;" > <div class="vis-widget-prev-body"> <fieldset class="fancy-switch" data-o style="background-image: url(widgets/fancyswitch/img/fancyswitch-4.svg); background-position: 100% 50%; background-repeat: initial initial;"> <label class="fancy-off" style="text-indent: -10000px;">Off<input type="radio" class="fancy-on_off" name="w00007_on_off" value="0" style="display: none;"></label> <label class="fancy-on" style="text-indent: -10000px;">On<input type="radio" class="fancy-on_off" name="w00007_on_off" value="1" style="display: none;"></label> </fieldset> <div></div> </div> </div>'
         data-vis-set="fancyswitch"
         data-vis-type="ctrl - Bool"
         data-vis-name="Schieber dunkel Aus/Ein"
@@ -316,7 +318,7 @@
                 <label class="fancy-off">Off<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= (this.data.attr('valFalse') !== undefined) ? this.data.attr('valFalse') : 0 %>"/></label>
                 <label class="fancy-on">On<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= (this.data.attr('valTrue') === '' || this.data.attr('valTrue') === null || this.data.attr('valTrue') === undefined) ? 1 : this.data.attr('valTrue') %>"/></label>
             </fieldset>
-            <div <%= (el) -> vis.binds.fancyswitch.fancyswitch(el, {src: "widgets/fancyswitch/img/fancyswitch-4.png", invert: data.attr('invert'), valTrue: this.data.attr('valTrue'), valFalse: this.data.attr('valFalse'), autoOff: this.data.attr('autoOff')}) %>></div>
+            <div <%= (el) -> vis.binds.fancyswitch.fancyswitch(el, {src: "widgets/fancyswitch/img/fancyswitch-4.svg", invert: data.attr('invert'), valTrue: this.data.attr('valTrue'), valFalse: this.data.attr('valFalse'), autoOff: this.data.attr('autoOff')}) %>></div>
         </div>
     </div>
 </script>
@@ -324,7 +326,7 @@
 <script id="tplFancyDarkAnAusWippe"
         type="text/ejs"
         class="vis-tpl"
-        data-vis-prev='<div id="prev_tplFancyDarkAnAusWippe" style=" position: relative; text-align: initial;padding: 4px "><div class="vis-widget_prev ui-selectee" style="width: 102px; height: 49px; left: 73px; top: 232px; position: absolute;" > <div class="vis-widget-prev-body"> <fieldset class="fancy-switch" data-o style="background-image: url(widgets/fancyswitch/img/fancyswitch-5.png); background-position: 100% 50%; background-repeat: initial initial;"> <label class="fancy-off" style="text-indent: -10000px;">Off<input type="radio" class="fancy-on_off" name="w00002_on_off" value="0" style="display: none;"></label> <label class="fancy-on" style="text-indent: -10000px;">On<input type="radio" class="fancy-on_off" name="w00002_on_off" value="1" style="display: none;"></label> </fieldset> <div></div> </div> </div>'
+        data-vis-prev='<div id="prev_tplFancyDarkAnAusWippe" style=" position: relative; text-align: initial;padding: 4px "><div class="vis-widget_prev ui-selectee" style="width: 102px; height: 49px; left: 73px; top: 232px; position: absolute;" > <div class="vis-widget-prev-body"> <fieldset class="fancy-switch" data-o style="background-image: url(widgets/fancyswitch/img/fancyswitch-5.svg); background-position: 100% 50%; background-repeat: initial initial;"> <label class="fancy-off" style="text-indent: -10000px;">Off<input type="radio" class="fancy-on_off" name="w00002_on_off" value="0" style="display: none;"></label> <label class="fancy-on" style="text-indent: -10000px;">On<input type="radio" class="fancy-on_off" name="w00002_on_off" value="1" style="display: none;"></label> </fieldset> <div></div> </div> </div>'
         data-vis-set="fancyswitch"
         data-vis-type="ctrl - Bool"
         data-vis-name="Wippe dunkel Aus/Ein"
@@ -335,7 +337,7 @@
                 <label class="fancy-off">Off<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= (this.data.attr('valFalse') !== undefined) ? this.data.attr('valFalse') : 0 %>"/></label>
                 <label class="fancy-on">On<input type="radio" class="fancy-on_off" name="<%= this.data.attr('wid') %>_on_off" value="<%= (this.data.attr('valTrue') === '' || this.data.attr('valTrue') === null || this.data.attr('valTrue') === undefined) ? 1 : this.data.attr('valTrue') %>"/></label>
             </fieldset>
-            <div <%= (el) -> vis.binds.fancyswitch.fancyswitch(el, {src: data.attr('lightStyle') ? "widgets/fancyswitch/img/fancyswitch-6.png" : "widgets/fancyswitch/img/fancyswitch-5.png", invert: data.attr('invert'), valTrue: this.data.attr('valTrue'), valFalse: this.data.attr('valFalse'), autoOff: this.data.attr('autoOff')}) %>></div>
+            <div <%= (el) -> vis.binds.fancyswitch.fancyswitch(el, {src: data.attr('lightStyle') ? "widgets/fancyswitch/img/fancyswitch-6.svg" : "widgets/fancyswitch/img/fancyswitch-5.svg", invert: data.attr('invert'), valTrue: this.data.attr('valTrue'), valFalse: this.data.attr('valFalse'), autoOff: this.data.attr('autoOff')}) %>></div>
         </div>
     </div>
 </script>

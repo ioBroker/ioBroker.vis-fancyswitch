@@ -2,58 +2,170 @@
     "common": {
         "name": "vis-fancyswitch",
         "version": "1.1.0",
-        "title": "ioBroker Visualisation - fancyswitch style Widgets",
         "news": {
             "1.1.0": {
                 "en": "Enhance handling of boolean and textual values for on/off",
                 "de": "Behandlung von Boolean und Zeichenketten als Werte für Ein/Aus verbessert",
-                "ru": "Enhance handling of boolean and textual values for on/off"
+                "ru": "Улучшена обработка логических и текстовых значений для вкл/выкл",
+                "pt": "Melhorar o tratamento de valores booleanos e textuais para ligar/desligar",
+                "nl": "Verbeterde verwerking van booleaanse en tekstuele waarden voor aan/uit",
+                "fr": "Amélioration de la gestion des valeurs booléennes et textuelles pour marche/arrêt",
+                "it": "Migliorata la gestione dei valori booleani e testuali per on/off",
+                "es": "Mejorado el manejo de valores booleanos y textuales para encendido/apagado",
+                "pl": "Ulepszona obsługa wartości logicznych i tekstowych dla wł./wył.",
+                "uk": "Покращено обробку логічних та текстових значень для увімк./вимк.",
+                "zh-cn": "增强了开/关的布尔值和文本值处理"
             },
             "1.0.0": {
                 "en": "fix button Giva Labs iButton (other widgets did not work)",
-                "de": "fix button Giva Labs iButton (other widgets did not work)",
-                "ru": "fix button Giva Labs iButton (other widgets did not work)"
+                "de": "Giva Labs iButton repariert (andere Widgets funktionierten nicht)",
+                "ru": "Исправлена кнопка Giva Labs iButton (другие виджеты не работали)",
+                "pt": "corrigir botão Giva Labs iButton (outros widgets não funcionavam)",
+                "nl": "knop Giva Labs iButton gerepareerd (andere widgets werkten niet)",
+                "fr": "correction du bouton Giva Labs iButton (les autres widgets ne fonctionnaient pas)",
+                "it": "corretto il pulsante Giva Labs iButton (gli altri widget non funzionavano)",
+                "es": "corregido el botón Giva Labs iButton (otros widgets no funcionaban)",
+                "pl": "naprawiono przycisk Giva Labs iButton (inne widżety nie działały)",
+                "uk": "виправлено кнопку Giva Labs iButton (інші віджети не працювали)",
+                "zh-cn": "修复 Giva Labs iButton 按钮（其他小部件无法工作）"
             }
         },
+        "titleLang": {
+            "en": "Fancy switches",
+            "de": "Schicke Schalter",
+            "ru": "Красивые переключатели",
+            "pt": "Interruptores elegantes",
+            "nl": "Chique schakelaars",
+            "fr": "Interrupteurs élégants",
+            "it": "Interruttori eleganti",
+            "es": "Interruptores elegantes",
+            "pl": "Eleganckie przełączniki",
+            "uk": "Гарні перемикачі",
+            "zh-cn": "精美开关"
+        },
         "desc": {
-            "en": "Switch widgets for ioBroker.vis",
-            "de": "Schalter und Wippe-Widgets für ioBroker.vis",
-            "ru": "Переключатели для ioBroker.vis"
+            "en": "Switch and rocker widgets for ioBroker.vis",
+            "de": "Schalter- und Wippe-Widgets für ioBroker.vis",
+            "ru": "Переключатели и клавишные выключатели для ioBroker.vis",
+            "pt": "Widgets de interruptor e basculante para ioBroker.vis",
+            "nl": "Schakelaar- en wipschakelaar-widgets voor ioBroker.vis",
+            "fr": "Widgets interrupteur et bascule pour ioBroker.vis",
+            "it": "Widget interruttore e bilanciere per ioBroker.vis",
+            "es": "Widgets de interruptor y basculante para ioBroker.vis",
+            "pl": "Widżety przełączników i klawiszy dla ioBroker.vis",
+            "uk": "Віджети вимикачів та клавіш для ioBroker.vis",
+            "zh-cn": "用于 ioBroker.vis 的开关和跷板小部件"
         },
         "platform": "Javascript/Node.js",
         "loglevel": "info",
-        "icon": "fancyswitch.png",
+        "icon": "fancyswitch.svg",
         "enabled": true,
-        "mode": "once",
-        "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-fancyswitch/master/admin/fancyswitch.png",
-        "keywords": [
-            "fancyswitch",
-            "vis",
-            "GUI",
-            "graphical",
-            "scada"
-        ],
+        "mode": "none",
+        "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-fancyswitch/master/admin/fancyswitch.svg",
+        "keywords": ["fancyswitch", "vis", "vis-2", "GUI", "graphical", "scada"],
         "readme": "https://github.com/ioBroker/ioBroker.vis-fancyswitch/blob/master/README.md",
-        "authors": [
-            "bluefox <dogafox@gmail.com>"
-        ],
-        "localLink": "%web_protocol%://%ip%:%web_port%/vis/edit.html",
-        "license": "Apache 2.0",
-        "dependencies": [
-            "vis"
-        ],
+        "authors": ["bluefox <dogafox@gmail.com>"],
         "onlyWWW": true,
         "singleton": true,
         "type": "visualization-widgets",
-        "restartAdapters": [
-            "vis"
+        "restartAdapters": ["vis", "vis-2"],
+        "noConfig": true,
+        "adminUI": {
+            "config": "none"
+        },
+        "tier": 3,
+        "licenseInformation": {
+            "type": "free",
+            "license": "Apache-2.0"
+        },
+        "messages": [
+            {
+                "condition": {
+                    "operand": "and",
+                    "rules": ["!vis", "!vis-2"]
+                },
+                "title": {
+                    "en": "No vis adapter found",
+                    "de": "Kein vis-Adapter gefunden",
+                    "ru": "Адаптер vis не найден",
+                    "pt": "Nenhum adaptador vis encontrado",
+                    "nl": "Geen vis-adapter gevonden",
+                    "fr": "Aucun adaptateur vis trouvé",
+                    "it": "Nessun adattatore vis trovato",
+                    "es": "No se encontró ningún adaptador vis",
+                    "pl": "Nie znaleziono adaptera vis",
+                    "uk": "Адаптер vis не знайдено",
+                    "zh-cn": "找不到vis适配器"
+                },
+                "text": {
+                    "en": "This adapter requires the vis or vis-2 adapter to be installed and running. Install it, if you want to use this widgets.",
+                    "de": "Dieser Adapter benötigt den vis- oder vis-2-Adapter, der installiert und ausgeführt wird. Installieren Sie es, wenn Sie diese Widgets verwenden möchten.",
+                    "ru": "Этот адаптер требует установки и запуска адаптера vis или vis-2. Установите его, если хотите использовать эти виджеты.",
+                    "pt": "Este adaptador requer que o adaptador vis ou vis-2 seja instalado e executado. Instale-o, se quiser usar esses widgets.",
+                    "nl": "Deze adapter vereist dat de vis- of vis-2-adapter is geïnstalleerd en wordt uitgevoerd. Installeer het als u deze widgets wilt gebruiken.",
+                    "fr": "Cet adaptateur nécessite que l'adaptateur vis ou vis-2 soit installé et en cours d'exécution. Installez-le si vous souhaitez utiliser ces widgets.",
+                    "it": "Questo adattatore richiede che l'adattatore vis o vis-2 sia installato ed in esecuzione. Installalo se vuoi utilizzare questi widget.",
+                    "es": "Este adaptador requiere que el adaptador vis o vis-2 esté instalado y en funcionamiento. Instálalo si quieres usar estos widgets.",
+                    "pl": "Ten adapter wymaga zainstalowania i uruchomienia adaptera vis lub vis-2. Zainstaluj go, jeśli chcesz używać tych widżetów.",
+                    "uk": "Цей адаптер потребує встановлення та запуску адаптера vis або vis-2. Встановіть його, якщо хочете використовувати ці віджети.",
+                    "zh-cn": "此适配器需要安装和运行vis或vis-2适配器。如果要使用这些小部件，请安装它。"
+                },
+                "level": "info",
+                "buttons": ["ok", "cancel"]
+            },
+            {
+                "condition": {
+                    "operand": "and",
+                    "rules": ["vis-2<2.12.8"]
+                },
+                "title": {
+                    "en": "vis-2 is too old",
+                    "de": "vis-2 ist zu alt",
+                    "ru": "vis-2 слишком старый",
+                    "pt": "vis-2 é demasiado antigo",
+                    "nl": "vis-2 is te oud",
+                    "fr": "vis-2 est trop ancien",
+                    "it": "vis-2 è troppo vecchio",
+                    "es": "vis-2 es demasiado antiguo",
+                    "pl": "vis-2 jest zbyt stary",
+                    "uk": "vis-2 застарий",
+                    "zh-cn": "vis-2 版本过旧"
+                },
+                "text": {
+                    "en": "The React widgets require vis-2 2.12.8 or newer. With an older vis-2 the widgets of vis-1 are used.",
+                    "de": "Die React-Widgets benötigen vis-2 2.12.8 oder neuer. Mit einem älteren vis-2 werden die Widgets von vis-1 verwendet.",
+                    "ru": "React-виджеты требуют vis-2 2.12.8 или новее. Со старым vis-2 используются виджеты vis-1.",
+                    "pt": "Os widgets React requerem vis-2 2.12.8 ou mais recente. Com um vis-2 mais antigo são usados os widgets do vis-1.",
+                    "nl": "De React-widgets vereisen vis-2 2.12.8 of nieuwer. Met een oudere vis-2 worden de vis-1-widgets gebruikt.",
+                    "fr": "Les widgets React nécessitent vis-2 2.12.8 ou plus récent. Avec un vis-2 plus ancien, les widgets de vis-1 sont utilisés.",
+                    "it": "I widget React richiedono vis-2 2.12.8 o successivo. Con un vis-2 più vecchio vengono usati i widget di vis-1.",
+                    "es": "Los widgets de React requieren vis-2 2.12.8 o superior. Con un vis-2 más antiguo se usan los widgets de vis-1.",
+                    "pl": "Widgety React wymagają vis-2 2.12.8 lub nowszego. Ze starszym vis-2 używane są widgety vis-1.",
+                    "uk": "React-віджети потребують vis-2 2.12.8 або новіше. Зі старішим vis-2 використовуються віджети vis-1.",
+                    "zh-cn": "React 小部件需要 vis-2 2.12.8 或更高版本。使用较旧的 vis-2 时将使用 vis-1 的小部件。"
+                },
+                "level": "warn",
+                "buttons": ["ok"]
+            }
         ],
-        "noConfig": true
+        "visWidgets": {
+            "visFancySwitch": {
+                "i18n": "component",
+                "name": "visFancySwitch",
+                "url": "vis-2-widgets-fancyswitch/customWidgets.js",
+                "bundlerType": "module",
+                "components": [
+                    "FancySwitch1",
+                    "FancySwitch2",
+                    "FancyDarkAnAus",
+                    "FancyDarkAnAusRev",
+                    "FancyDarkAnAusWippe",
+                    "FancyGivaIButton",
+                    "FancyToggleswitch"
+                ]
+            }
+        }
     },
-    "native": {
-        "dependencies": [
-            "basic"
-        ]
-    },
+    "native": {},
     "instanceObjects": []
 }
