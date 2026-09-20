@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="89" height="27" viewBox="0 0 89 27">
+<defs>
+<linearGradient id="ibon" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3061a8"/><stop offset="1" stop-color="#8bbaf6"/></linearGradient>
+<linearGradient id="iboff" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#adadad"/><stop offset="1" stop-color="#fdfdfd"/></linearGradient>
+<linearGradient id="ibh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e3e3e3"/><stop offset="1" stop-color="#fcfcfc"/></linearGradient>
+<clipPath id="ibc"><rect x="0" y="0" width="89" height="27" rx="3"/></clipPath>
+</defs>
+<g clip-path="url(#ibc)">
+  <rect x="0" y="0" width="89" height="27" fill="url(#iboff)"/>
+  <rect x="0" y="0" width="54" height="27" fill="url(#ibon)"/>
+  <text x="131" y="19" text-anchor="end" font-family="'Helvetica Neue', Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#7c7c7c">OFF</text>
+  <text x="8" y="19" font-family="'Helvetica Neue', Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">ON</text>
+  <rect x="50.5" y="0.5" width="32" height="26" rx="2.5" fill="url(#ibh)" stroke="#a4a4a4"/>
+</g>
+</svg>

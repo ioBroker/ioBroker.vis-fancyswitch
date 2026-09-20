@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="228" height="77" viewBox="0 0 228 77">
+
+<text x="16" y="28" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#555555">OFF</text>
+<g transform="translate(16 34)">
+<defs>
+<linearGradient id="iaon" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3061a8"/><stop offset="1" stop-color="#8bbaf6"/></linearGradient>
+<linearGradient id="iaoff" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#adadad"/><stop offset="1" stop-color="#fdfdfd"/></linearGradient>
+<linearGradient id="iah" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e3e3e3"/><stop offset="1" stop-color="#fcfcfc"/></linearGradient>
+<clipPath id="iac"><rect x="0" y="0" width="89" height="27" rx="3"/></clipPath>
+</defs>
+<g clip-path="url(#iac)">
+  <rect x="0" y="0" width="89" height="27" fill="url(#iaoff)"/>
+  <rect x="0" y="0" width="4" height="27" fill="url(#iaon)"/>
+  <text x="81" y="19" text-anchor="end" font-family="'Helvetica Neue', Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#7c7c7c">OFF</text>
+  <text x="-42" y="19" font-family="'Helvetica Neue', Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">ON</text>
+  <rect x="0.5" y="0.5" width="32" height="26" rx="2.5" fill="url(#iah)" stroke="#a4a4a4"/>
+</g>
+</g>
+<text x="123" y="28" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#555555">ON</text>
+<g transform="translate(123 34)">
+<defs>
+<linearGradient id="ibon" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3061a8"/><stop offset="1" stop-color="#8bbaf6"/></linearGradient>
+<linearGradient id="iboff" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#adadad"/><stop offset="1" stop-color="#fdfdfd"/></linearGradient>
+<linearGradient id="ibh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e3e3e3"/><stop offset="1" stop-color="#fcfcfc"/></linearGradient>
+<clipPath id="ibc"><rect x="0" y="0" width="89" height="27" rx="3"/></clipPath>
+</defs>
+<g clip-path="url(#ibc)">
+  <rect x="0" y="0" width="89" height="27" fill="url(#iboff)"/>
+  <rect x="0" y="0" width="54" height="27" fill="url(#ibon)"/>
+  <text x="131" y="19" text-anchor="end" font-family="'Helvetica Neue', Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#7c7c7c">OFF</text>
+  <text x="8" y="19" font-family="'Helvetica Neue', Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">ON</text>
+  <rect x="50.5" y="0.5" width="32" height="26" rx="2.5" fill="url(#ibh)" stroke="#a4a4a4"/>
+</g>
+</g>
+</svg>

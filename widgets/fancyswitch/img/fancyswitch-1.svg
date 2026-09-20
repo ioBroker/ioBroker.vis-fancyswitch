@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="213" height="46" viewBox="0 0 213 46">
+<g><defs><linearGradient id="af" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#efefef"/><stop offset="1" stop-color="#cdcdcd"/></linearGradient><linearGradient id="as" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c6c6c6"/><stop offset="1" stop-color="#aeaeae"/></linearGradient><linearGradient id="ak" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfbfb"/><stop offset="1" stop-color="#dddddd"/></linearGradient></defs>
+
+<rect x="2.5" y="5.5" width="100" height="35" rx="6" fill="url(#af)" stroke="#a2a2a2"/>
+<rect x="5.5" y="8.5" width="46" height="29" rx="4" fill="url(#as)" stroke="#949494" stroke-opacity="0.85"/>
+<rect x="53.5" y="8.5" width="46" height="29" rx="4" fill="url(#ak)" stroke="#a8a8a8"/>
+<path d="M55.5 10.5h42" stroke="#ffffff" stroke-opacity="0.8" stroke-linecap="round"/>
+<text x="28.5" y="28.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#3a3a3a">OFF</text>
+<text x="76.5" y="28.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#3a3a3a">ON</text></g>
+<g transform="translate(108 0)"><defs><linearGradient id="bf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#efefef"/><stop offset="1" stop-color="#cdcdcd"/></linearGradient><linearGradient id="bs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c6c6c6"/><stop offset="1" stop-color="#aeaeae"/></linearGradient><linearGradient id="bk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfbfb"/><stop offset="1" stop-color="#dddddd"/></linearGradient></defs>
+
+<rect x="2.5" y="5.5" width="100" height="35" rx="6" fill="url(#bf)" stroke="#a2a2a2"/>
+<rect x="53.5" y="8.5" width="46" height="29" rx="4" fill="url(#bs)" stroke="#949494" stroke-opacity="0.85"/>
+<rect x="5.5" y="8.5" width="46" height="29" rx="4" fill="url(#bk)" stroke="#a8a8a8"/>
+<path d="M7.5 10.5h42" stroke="#ffffff" stroke-opacity="0.8" stroke-linecap="round"/>
+<text x="28.5" y="28.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#3a3a3a">OFF</text>
+<text x="76.5" y="28.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#3a3a3a">ON</text></g>
+</svg>

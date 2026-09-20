@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="178" viewBox="0 0 260 178">
+
+<text x="16" y="28" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#555555">OFF</text>
+<g transform="translate(16 34)">
+<defs><linearGradient id="dar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#767676"/><stop offset="1" stop-color="#414141"/></linearGradient><linearGradient id="dap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4f4f4f"/><stop offset="1" stop-color="#333333"/></linearGradient><filter id="dag" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.2"/></filter></defs>
+
+<rect x="50.5" y="5.5" width="4" height="33" rx="1.5" fill="#111111"/>
+<rect x="3.5" y="7" width="48" height="31.5" rx="5" fill="url(#dap)" stroke="#0e0f0f"/>
+
+<text x="28" y="28.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#1e1e1e">AUS</text>
+<rect x="53.5" y="5.5" width="48" height="33" rx="5" fill="url(#dar)" stroke="#0e0f0f"/>
+<path d="M56.5 7.5h42" stroke="#ffffff" stroke-opacity="0.35" stroke-linecap="round"/>
+<text x="77" y="27.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#1e1e1e">EIN</text>
+</g>
+<text x="139" y="28" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#555555">ON</text>
+<g transform="translate(139 34)">
+<defs><linearGradient id="dbr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#767676"/><stop offset="1" stop-color="#414141"/></linearGradient><linearGradient id="dbp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4f4f4f"/><stop offset="1" stop-color="#333333"/></linearGradient><filter id="dbg" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.2"/></filter></defs>
+
+<rect x="50.5" y="5.5" width="4" height="33" rx="1.5" fill="#111111"/>
+<rect x="3.5" y="5.5" width="48" height="33" rx="5" fill="url(#dbr)" stroke="#0e0f0f"/>
+<path d="M6.5 7.5h42" stroke="#ffffff" stroke-opacity="0.35" stroke-linecap="round"/>
+<text x="28" y="27.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#1e1e1e">AUS</text>
+<rect x="53.5" y="7" width="48" height="31.5" rx="5" fill="url(#dbp)" stroke="#0e0f0f"/>
+
+<text x="77" y="28.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#00ccff" opacity="0.55" filter="url(#dbg)">EIN</text><text x="77" y="28.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#00ccff">EIN</text>
+</g>
+<text x="16" y="110" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#555555">OFF</text>
+<g transform="translate(16 116)">
+<defs><linearGradient id="lar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dedede"/><stop offset="1" stop-color="#9a9a9a"/></linearGradient><linearGradient id="lap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bdbdbd"/><stop offset="1" stop-color="#8a8a8a"/></linearGradient><filter id="lag" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.2"/></filter></defs>
+
+<rect x="50.5" y="5.5" width="4" height="33" rx="1.5" fill="#6a6a6a"/>
+<rect x="3.5" y="7" width="48" height="31.5" rx="5" fill="url(#lap)" stroke="#5b5c5c"/>
+
+<text x="28" y="28.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#5f5f5f">AUS</text>
+<rect x="53.5" y="5.5" width="48" height="33" rx="5" fill="url(#lar)" stroke="#5b5c5c"/>
+<path d="M56.5 7.5h42" stroke="#ffffff" stroke-opacity="0.35" stroke-linecap="round"/>
+<text x="77" y="27.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#5f5f5f">EIN</text>
+</g>
+<text x="139" y="110" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#555555">ON</text>
+<g transform="translate(139 116)">
+<defs><linearGradient id="lbr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dedede"/><stop offset="1" stop-color="#9a9a9a"/></linearGradient><linearGradient id="lbp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bdbdbd"/><stop offset="1" stop-color="#8a8a8a"/></linearGradient><filter id="lbg" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.2"/></filter></defs>
+
+<rect x="50.5" y="5.5" width="4" height="33" rx="1.5" fill="#6a6a6a"/>
+<rect x="3.5" y="5.5" width="48" height="33" rx="5" fill="url(#lbr)" stroke="#5b5c5c"/>
+<path d="M6.5 7.5h42" stroke="#ffffff" stroke-opacity="0.35" stroke-linecap="round"/>
+<text x="28" y="27.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#5f5f5f">AUS</text>
+<rect x="53.5" y="7" width="48" height="31.5" rx="5" fill="url(#lbp)" stroke="#5b5c5c"/>
+
+<text x="77" y="28.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#00a8c8" opacity="0.55" filter="url(#lbg)">EIN</text><text x="77" y="28.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#00a8c8">EIN</text>
+</g>
+</svg>

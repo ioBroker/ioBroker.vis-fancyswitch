@@ -1,0 +1,202 @@
+/*
+ * fancyswitch widgets for vis-2.
+ *
+ * Everything is scoped under `.fancy-rx` so a project that still has the vis-1 widget set loaded keeps both
+ * stylesheets side by side without them fighting over the same selectors - the vis-1 set uses `.fancy-switch`,
+ * `.ibutton-*` and `.ui-toggle-switch`.
+ *
+ * The five switch styles are drawn as SVG (see `Components/fancyArt.ts`) and need no rules at all; what is
+ * left here is the iButton and the toggle switch, which are DOM widgets with a moving handle.
+ */
+
+.fancy-rx {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+
+    /*
+     * Only the toggle switch follows the vis-2 theme. The iButton and the five switch styles are surfaces of
+     * the object itself - a blue iButton stays blue at night, just like a real switch on a wall.
+     */
+    --fancy-label: #333333;
+    --fancy-label-active: #1a1a1a;
+    --fancy-track-bg: #f0f0f0;
+    --fancy-track-border: #d3d3d3;
+    --fancy-range-bg: linear-gradient(to bottom, #6fa8dc 0%, #3d8bfd 100%);
+    --fancy-handle-bg: linear-gradient(to bottom, #ffffff 0%, #e4e4e4 100%);
+    --fancy-handle-border: #b8b8b8;
+}
+
+/* Set by the widgets when `context.themeType` is `dark` */
+.fancy-rx.fancy-rx-dark {
+    --fancy-label: #c8cace;
+    --fancy-label-active: #ffffff;
+    --fancy-track-bg: #2f3237;
+    --fancy-track-border: #4a4e55;
+    --fancy-range-bg: linear-gradient(to bottom, #3d8bfd 0%, #2569cc 100%);
+    --fancy-handle-bg: linear-gradient(to bottom, #e9e9e9 0%, #c2c2c2 100%);
+    --fancy-handle-border: #6c7076;
+}
+
+.fancy-switch-art {
+    display: block;
+}
+
+/* -------------------------------------------------------------------------- Giva Labs iButton */
+
+.fancy-ibutton {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 3px;
+    max-width: 400px;
+    box-sizing: border-box;
+    touch-action: none;
+}
+
+.fancy-ibutton-readonly {
+    cursor: default;
+}
+
+.fancy-ibutton-label {
+    position: absolute;
+    top: 0;
+    height: 22px;
+    padding-top: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    font:
+        bold 17px/17px 'Helvetica Neue',
+        Arial,
+        Helvetica,
+        sans-serif;
+    text-transform: uppercase;
+    cursor: inherit;
+    box-sizing: content-box;
+}
+
+.fancy-ibutton-label label {
+    padding: 1px 3px;
+    cursor: inherit;
+}
+
+/* The gradients are the ones of `ibutton-slider-default.png`, with its highlight break in the middle */
+.fancy-ibutton-on {
+    left: 0;
+    z-index: 1;
+    color: #ffffff;
+    text-shadow: 0 -1px 2px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, #3061a8 0%, #5c95e5 50%, #6aa2e9 52%, #8bbaf6 100%);
+}
+
+.fancy-ibutton-on span {
+    padding-left: 5px;
+}
+
+.fancy-ibutton-off {
+    right: 0;
+    /* near the left edge, but never far enough to appear from under the handle - as in the original */
+    width: 95%;
+    text-align: right;
+    color: #7c7c7c;
+    text-shadow: 0 -1px 2px rgba(153, 153, 153, 0.4);
+    background: linear-gradient(to bottom, #adadad 0%, #e6e6e6 50%, #efefef 52%, #fdfdfd 100%);
+}
+
+.fancy-ibutton-off span {
+    padding-right: 5px;
+}
+
+/* Clips the text before the rounded ends of the bar */
+.fancy-ibutton-pad {
+    position: absolute;
+    top: 4px;
+    z-index: 2;
+    width: 3px;
+    height: 20px;
+}
+
+.fancy-ibutton-pad-left {
+    left: 0;
+    background: linear-gradient(to bottom, #3b6eb5 0%, #5c95e5 45%, #6aa2e9 48%, #8bbaf6 100%);
+}
+
+.fancy-ibutton-pad-right {
+    right: 0;
+    background: linear-gradient(to bottom, #bcbcbc 0%, #e6e6e6 45%, #efefef 48%, #fdfdfd 100%);
+}
+
+.fancy-ibutton-handle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 3;
+    box-sizing: border-box;
+    border: 1px solid #a4a4a4;
+    border-radius: 3px;
+    background: linear-gradient(to bottom, #ebeaea 0%, #d7d8d8 7%, #fcfcfc 100%);
+}
+
+.fancy-ibutton-dragging .fancy-ibutton-handle {
+    border-color: #8e8e8e;
+    background: linear-gradient(to bottom, #d5d4d4 0%, #c1c2c2 7%, #e6e6e6 100%);
+}
+
+/* -------------------------------------------------------------------------- Taitem toggle switch */
+
+.fancy-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1;
+}
+
+.fancy-toggle-label {
+    color: var(--fancy-label);
+    padding: 2px 3px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.fancy-toggle-readonly .fancy-toggle-label,
+.fancy-toggle-readonly .fancy-toggle-track {
+    cursor: default;
+}
+
+.fancy-toggle-label.fancy-toggle-active {
+    color: var(--fancy-label-active);
+    font-weight: bold;
+}
+
+.fancy-toggle-track {
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid var(--fancy-track-border);
+    border-radius: 4px;
+    background: var(--fancy-track-bg);
+    cursor: pointer;
+}
+
+.fancy-toggle-range {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-radius: 4px;
+    background: var(--fancy-range-bg);
+}
+
+.fancy-toggle-handle {
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px solid var(--fancy-handle-border);
+    border-radius: 3px;
+    background: var(--fancy-handle-bg);
+    transition: left 0.15s ease-in-out;
+}
