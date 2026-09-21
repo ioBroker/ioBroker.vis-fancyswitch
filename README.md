@@ -84,6 +84,8 @@ Every widget with its settings: [English](docs/en/README.md) | [Deutsch](docs/de
 
 - (bluefox) initial checkin
 
+[Older changelogs can be found there](CHANGELOG_OLD.md)
+
 ## License
 
 Copyright (c) 2013-2026 hobbyquaker https://github.com/hobbyquaker, bluefox https://github.com/GermanBluefox
