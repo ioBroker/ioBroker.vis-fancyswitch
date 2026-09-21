@@ -1,7 +1,7 @@
 # fancyswitch for vis-2
 
-The fancyswitch set has seven widgets for switching a state on and off: four sliders, a rocker, the Giva Labs
-iButton and a small toggle switch. This page describes the **vis-2** version. vis (vis-1) has the same widgets
+The fancyswitch set has seven widgets for switching a state on and off: three sliders, two rockers, the Giva
+Labs iButton and a small toggle switch. This page describes the **vis-2** version. vis (vis-1) has the same widgets
 with the same settings; there they are drawn from images instead and cannot be resized without becoming blurry.
 
 ![All widgets](../img/overview.svg)
@@ -79,7 +79,9 @@ or higher stays sharp and centred in its box.
 
 ![Switch light](../img/switch1.svg)
 
-The bright switch. Both labels stay visible and the raised key sits on the half of the current state.
+The bright rocker: one key hinged in its middle. The half of the current state is pressed down, the other half
+stands up towards the viewer and casts a shadow; when the state changes, the key tips over. Both labels stay
+visible; nothing lights up.
 
 Settings: see [Settings shared by the five switch styles](#settings-shared-by-the-five-switch-styles).
 
@@ -87,8 +89,10 @@ Settings: see [Settings shared by the five switch styles](#settings-shared-by-th
 
 ![Slider dark](../img/switch2.svg)
 
-The dark slider on a dark panel. The key is pushed to the other half, so the label of the current state becomes
-visible; the `ON` label lights up cyan.
+The dark slider on a dark panel. The knob and both labels sit on one strip that slides behind the frame, like
+on a real sliding switch: the label of the current state is visible, the other one is hidden under the frame.
+When the state changes, the strip slides over. The `ON` label glows cyan. The labels can be any short text, for
+example `0` and `I`.
 
 Settings: see [Settings shared by the five switch styles](#settings-shared-by-the-five-switch-styles).
 
@@ -112,8 +116,10 @@ Settings: see [Settings shared by the five switch styles](#settings-shared-by-th
 
 ![Rocker switch](../img/rocker.svg)
 
-Two keys next to each other; the key of the current state is pressed down, and the "on" key lights up cyan while
-it is active. The top row is the dark style, the bottom row the light one.
+One key hinged in its middle, like the [light switch](#switch-light---tplfancyswitch1): the half of the current
+state is pressed down, the other half stands up. When the state changes, the key tips over through its middle
+position. The "on" half lights up cyan while it is pressed. The top row is the dark style, the bottom row the
+light one.
 
 Besides the [shared settings](#settings-shared-by-the-five-switch-styles):
 
@@ -164,6 +170,8 @@ therefore also works in the dark theme.
 
 - The widgets are drawn as SVG instead of being cut out of a PNG, so they can be resized freely.
 - The labels of the five switch styles are settings now; in vis-1 they were part of the image.
+- The switches move when the state changes: the sliders slide over, their labels moving with the knob, and the
+  rockers tip over through their middle position. In vis-1 the picture jumped.
 - A boolean state is recognized as "on" when _True value_ is left at its default of `1`. In vis-1 a `true` was
   compared with the text `1` and never matched, so such a widget stayed off.
 - In _Slider dark ON/OFF_ both halves switch to the state their label shows. In vis-1 the left half always wrote

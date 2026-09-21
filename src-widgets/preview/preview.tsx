@@ -4,6 +4,8 @@
  * All seven widgets against the stub of `VisRxWidget`, no ioBroker needed. The state values live here, not in
  * the widgets, so a click on one widget moves every widget that is bound to the same object id - the same round
  * trip as in vis-2.
+ *
+ * The two text fields in the header override the labels of every widget; left empty, each widget keeps its own.
  */
 import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
@@ -51,10 +53,25 @@ const ROWS: Row[] = [
     { title: 'tplFancyToggleswitch', Widget: widgets.FancyToggleswitch, width: 160, height: 30 },
 ];
 
+/** The attributes that carry the two labels - the iButton names them differently */
+function labelData(Widget: any, textFalse: string, textTrue: string): Record<string, string> {
+    const iButton = Widget === widgets.FancyGivaIButton;
+    const data: Record<string, string> = {};
+    if (textFalse) {
+        data[iButton ? 'labelOff' : 'text_false'] = textFalse;
+    }
+    if (textTrue) {
+        data[iButton ? 'labelOn' : 'text_true'] = textTrue;
+    }
+    return data;
+}
+
 function Preview(): React.JSX.Element {
     const [values, setValues] = useState<Record<string, any>>({ [`${OID}.val`]: false });
     const [dark, setDark] = useState(false);
     const [editMode, setEditMode] = useState(false);
+    const [textFalse, setTextFalse] = useState('');
+    const [textTrue, setTextTrue] = useState('');
 
     const context = {
         themeType: dark ? 'dark' : 'light',
@@ -91,6 +108,40 @@ function Preview(): React.JSX.Element {
                     edit mode
                 </label>
                 <button onClick={() => context.setValue(OID, !on)}>{`${OID} = ${String(on)}`}</button>
+                <label>
+                    Text aus{' '}
+                    <input
+                        value={textFalse}
+                        placeholder="default"
+                        style={{ width: 70 }}
+                        onChange={e => setTextFalse(e.target.value)}
+                    />
+                </label>
+                <label>
+                    Text an{' '}
+                    <input
+                        value={textTrue}
+                        placeholder="default"
+                        style={{ width: 70 }}
+                        onChange={e => setTextTrue(e.target.value)}
+                    />
+                </label>
+                <button
+                    onClick={() => {
+                        setTextFalse('0');
+                        setTextTrue('I');
+                    }}
+                >
+                    0 / I
+                </button>
+                <button
+                    onClick={() => {
+                        setTextFalse('');
+                        setTextTrue('');
+                    }}
+                >
+                    default
+                </button>
             </div>
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 24 }}>
@@ -109,7 +160,11 @@ function Preview(): React.JSX.Element {
                         >
                             <row.Widget
                                 context={context}
-                                rxData={withDefaults(row.Widget, { oid: OID, ...(row.data || {}) })}
+                                rxData={withDefaults(row.Widget, {
+                                    oid: OID,
+                                    ...(row.data || {}),
+                                    ...labelData(row.Widget, textFalse, textTrue),
+                                })}
                                 values={values}
                                 editMode={editMode}
                             />

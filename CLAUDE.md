@@ -69,9 +69,21 @@ strings**, and `src-widgets/makeAssets.mjs` (`npm run assets`) writes every stat
 `makeAssets.mjs` bundles `fancyArt.ts` for node with vite first, the same trick `checkWidgets.mjs` uses.
 **Re-run `npm run assets` after touching `fancyArt.ts`**, otherwise the generated files drift from the source.
 
-The colours in `SLIDER_SKINS` / `ROCKER_SKINS` were measured in the original PNGs. Two deviations are
-deliberate and commented: the 1 px brushed texture of the light style became a plain gradient, and the light
-rocker lights its key with a darker cyan than the unreadable `#6fffff` of the PNG.
+Only sprites 2–4 are flat sliders (`SLIDER_SKIN`): one strip with a label slot on each side of the knob that
+slides by one half behind the frame, so one label hides under the frame while the other comes out.
+
+Sprites 1, 5 and 6 — `tplFancySwitch1` included — are **rockers** (`ROCKER_SKINS`): one key hinged in the middle
+and seen from above. The pressed half lies flat; the other half stands up, so its top edge rises, a wedge of its
+front face and its end face show and it casts a shadow, and its label is lifted and turned by 5°. Keep that 3D
+look — the flat two-rectangle version was wrong. `rockerHalf()` draws one half as the left one with a `raise`
+from 0 (flat) to 1 (standing); the right half is its mirror image (labels excluded). `tilt` (−1 left pressed … 1
+right pressed, `rockerTilt()`) sets both halves, so every position in between can be drawn; 0 is the V-shaped
+middle where both halves stand up half way.
+
+The colours were measured in the original PNGs, which are still in git
+(`git show e56f479^:widgets/fancyswitch/img/fancyswitch-1.png`). Two deviations are deliberate and commented: the
+1 px brushed texture of the light switch became a plain gradient, and the light rocker lights its key with a
+darker cyan than the unreadable `#6fffff` of the PNG.
 
 ## Architecture of the vis-2 widget set (`src-widgets/`)
 
@@ -96,7 +108,12 @@ runtime, and declares `getI18nPrefix() === 'vis_fancyswitch_'`. The JSON files u
   vis-1 `vis.binds.fancyswitch.fancyswitch`. Subclasses only override `getVariant()`; `switchAttrs()` builds
   their editor groups.
 - `Components/FancySwitchArt.tsx` — wraps the markup of `fancyArt.ts` in a scaling `<svg>` and puts the two
-  click zones on top.
+  click zones on top. The sliders are a strip (slot | knob | slot) behind a clipped window; the widget asks for
+  `animated` markup, which does **not** depend on the state, and sets `--fancy-slide` from `switchMotion()` on its
+  `<g>`; `styles.css` transitions `.fancy-slide`. Keep that markup state-independent — if the string changes,
+  React replaces the `innerHTML` and the strip jumps instead of sliding. A rocker changes its shape, which CSS
+  cannot interpolate: `useTween()` moves its `tilt` over 300 ms and the markup is rebuilt for every frame. Both
+  honour `prefers-reduced-motion`.
 - `Components/IButton.tsx` — the Giva Labs iButton without jQuery. The geometry (handle = the _shorter_ label,
   bar = longer label + handle + 20, travel = width − handle − 6) is the one of the original plug-in; the look
   is CSS gradients in `styles.css`, not the sprite, because the handle has to follow the pointer.
@@ -118,7 +135,8 @@ runtime, and declares `getI18nPrefix() === 'vis_fancyswitch_'`. The JSON files u
 
 `npm run preview` starts a vite dev server (port 4173) with a page that renders all widgets against a stub of
 `VisRxWidget`. No ioBroker needed, and editing a widget hot-reloads it. The state values live in the page, so a
-click on one widget moves every widget bound to the same object id.
+click on one widget moves every widget bound to the same object id. The text fields in the header override the
+labels of all widgets (`text_false`/`text_true`, `labelOff`/`labelOn` for the iButton).
 
 `preview/widgets.ts` exists because the widgets extend `window.visRxWidget`: `preview.tsx` puts the stub in
 place first and then pulls that module in with a top-level `await import()`.

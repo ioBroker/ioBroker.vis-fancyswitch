@@ -52,6 +52,8 @@ Every widget with its settings: [English](docs/en/README.md) | [Deutsch](docs/de
 - (bluefox) All widgets were ported to vis-2 as React widgets, without jQuery, jQuery UI or the iButton plug-in
 - (bluefox) All images are SVG now and are generated from one source, so the switches stay sharp at any size
 - (bluefox) The labels of the switches (`OFF`/`ON`, `AUS`/`EIN`) can be changed - they used to be part of the image
+- (bluefox) The switches move when they switch: the sliders slide over with knob and labels together, like a real
+  sliding switch, and the rockers tip over through their middle position
 - (bluefox) A boolean state is recognized as "on" again when "True value" is left at its default of `1`
 - (bluefox) In "Schieber dunkel Ein/Aus" the halves now switch to the state their label shows; clicking `EIN`
   switched off before

@@ -5,8 +5,8 @@
  * stylesheets side by side without them fighting over the same selectors - the vis-1 set uses `.fancy-switch`,
  * `.ibutton-*` and `.ui-toggle-switch`.
  *
- * The five switch styles are drawn as SVG (see `Components/fancyArt.ts`) and need no rules at all; what is
- * left here is the iButton and the toggle switch, which are DOM widgets with a moving handle.
+ * The five switch styles are drawn as SVG (see `Components/fancyArt.ts`) and only need the transition of the
+ * sliders; the rest is the iButton and the toggle switch, which are DOM widgets with a moving handle.
  */
 
 .fancy-rx {
@@ -44,6 +44,17 @@
 
 .fancy-switch-art {
     display: block;
+}
+
+/* The strip of the sliders; `FancySwitchArt` moves it with `--fancy-slide` */
+.fancy-switch-art .fancy-slide {
+    transition: transform 0.3s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fancy-switch-art .fancy-slide {
+        transition: none;
+    }
 }
 
 /* -------------------------------------------------------------------------- Giva Labs iButton */

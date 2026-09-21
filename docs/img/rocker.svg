@@ -2,50 +2,84 @@
 
 <text x="16" y="28" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#555555">OFF</text>
 <g transform="translate(16 34)">
-<defs><linearGradient id="dar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#767676"/><stop offset="1" stop-color="#414141"/></linearGradient><linearGradient id="dap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4f4f4f"/><stop offset="1" stop-color="#333333"/></linearGradient><filter id="dag" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.2"/></filter></defs>
-
-<rect x="50.5" y="5.5" width="4" height="33" rx="1.5" fill="#111111"/>
-<rect x="3.5" y="7" width="48" height="31.5" rx="5" fill="url(#dap)" stroke="#0e0f0f"/>
-
-<text x="28" y="28.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#1e1e1e">AUS</text>
-<rect x="53.5" y="5.5" width="48" height="33" rx="5" fill="url(#dar)" stroke="#0e0f0f"/>
-<path d="M56.5 7.5h42" stroke="#ffffff" stroke-opacity="0.35" stroke-linecap="round"/>
-<text x="77" y="27.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#1e1e1e">EIN</text>
+<defs><linearGradient id="dap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5e5e5e"/><stop offset="1" stop-color="#3d3d3d"/></linearGradient><linearGradient id="dar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#646464"/><stop offset="1" stop-color="#464646"/></linearGradient><linearGradient id="dae" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3a3a"/><stop offset="1" stop-color="#303030"/></linearGradient><linearGradient id="daf" x1="0" y1="29.5" x2="0" y2="35.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2a2a2a"/><stop offset="1" stop-color="#141414"/></linearGradient><linearGradient id="dal" x1="0" y1="33.5" x2="0" y2="35.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0d0d0d"/><stop offset="1" stop-color="#151515"/></linearGradient><linearGradient id="dat" x1="8.5" y1="0" x2="52.5" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-opacity="0"/><stop offset="1" stop-opacity="0.15"/></linearGradient><linearGradient id="dah" x1="8.5" y1="0" x2="44.5" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8c8c8c"/><stop offset="1" stop-color="#0e0f0f"/></linearGradient><filter id="das" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="1.4"/></filter><filter id="dag" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.2"/></filter></defs>
+<path d="M53 3.5L7.5 3.5Q6.5 3.5 5.79 4.21L5.5 4.5Q4.5 5.5 4.5 7L4.5 32.5Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#dap)"/>
+<path d="M53 33.5L4.5 33.5L4.5 34.5Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#dal)"/>
+<path d="M53 5.5H7" stroke="#8c8c8c" stroke-opacity="0.35"/>
+<path d="M53 3.5L7.5 3.5Q6.5 3.5 5.79 4.21L5.5 4.5Q4.5 5.5 4.5 7L4.5 32.5Q4.5 35.5 7.5 35.5L53 35.5" fill="none" stroke="#0e0f0f"/>
+<g transform="matrix(-1 0 0 1 105 0)"><path d="M5.5 35.5L46.5 35.5L8.5 42L5.5 40.5Z" fill="#000000" opacity="0.6" filter="url(#das)"/>
+<path d="M53 3.5L9.5 1.54Q8.5 1.5 7.7 2.1L5.7 3.6Q4.5 4.5 4.5 6L4.5 32.5Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#dap)"/>
+<path d="M53 3.5L9.5 1.54Q8.5 1.5 7.7 2.1L5.7 3.6Q4.5 4.5 4.5 6L4.5 32.5Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#dar)" opacity="1"/>
+<path d="M53 3.5L9.5 1.54Q8.5 1.5 8.5 2.5L8.5 29.5L53 33.5Z" fill="url(#dat)" opacity="1"/>
+<path d="M53 33.5L4.5 33.5L4.5 34.5Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#dal)"/>
+<path d="M53 33.5L8.5 29.5L4.5 30.5L4.5 33Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#daf)" opacity="1"/>
+<path d="M8.5 2.5Q8.5 1.5 7.7 2.1L5.7 3.6Q4.5 4.5 4.5 6L4.5 30.5L8.5 29.5Z" fill="url(#dae)" opacity="1"/>
+<path d="M8.5 2.5V29.5" stroke="#8c8c8c" stroke-opacity="0.6"/>
+<path d="M53 3.5L9.5 1.54Q8.5 1.5 7.7 2.1L5.7 3.6Q4.5 4.5 4.5 6L4.5 32.5Q4.5 35.5 7.5 35.5L53 35.5" fill="none" stroke="#0e0f0f"/>
+<path d="M53 3.5L8.5 1.5" stroke="url(#dah)" stroke-opacity="1"/></g>
+<text x="25" y="25" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" letter-spacing="0.5" fill="#262626">AUS</text>
+<g transform="rotate(-5 77.5 17.5)"><text x="77.5" y="22.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" letter-spacing="0.5" fill="#262626">EIN</text></g>
 </g>
 <text x="139" y="28" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#555555">ON</text>
 <g transform="translate(139 34)">
-<defs><linearGradient id="dbr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#767676"/><stop offset="1" stop-color="#414141"/></linearGradient><linearGradient id="dbp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4f4f4f"/><stop offset="1" stop-color="#333333"/></linearGradient><filter id="dbg" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.2"/></filter></defs>
-
-<rect x="50.5" y="5.5" width="4" height="33" rx="1.5" fill="#111111"/>
-<rect x="3.5" y="5.5" width="48" height="33" rx="5" fill="url(#dbr)" stroke="#0e0f0f"/>
-<path d="M6.5 7.5h42" stroke="#ffffff" stroke-opacity="0.35" stroke-linecap="round"/>
-<text x="28" y="27.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#1e1e1e">AUS</text>
-<rect x="53.5" y="7" width="48" height="31.5" rx="5" fill="url(#dbp)" stroke="#0e0f0f"/>
-
-<text x="77" y="28.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#00ccff" opacity="0.55" filter="url(#dbg)">EIN</text><text x="77" y="28.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#00ccff">EIN</text>
+<defs><linearGradient id="dbp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5e5e5e"/><stop offset="1" stop-color="#3d3d3d"/></linearGradient><linearGradient id="dbr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#646464"/><stop offset="1" stop-color="#464646"/></linearGradient><linearGradient id="dbe" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3a3a"/><stop offset="1" stop-color="#303030"/></linearGradient><linearGradient id="dbf" x1="0" y1="29.5" x2="0" y2="35.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2a2a2a"/><stop offset="1" stop-color="#141414"/></linearGradient><linearGradient id="dbl" x1="0" y1="33.5" x2="0" y2="35.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0d0d0d"/><stop offset="1" stop-color="#151515"/></linearGradient><linearGradient id="dbt" x1="8.5" y1="0" x2="52.5" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-opacity="0"/><stop offset="1" stop-opacity="0.15"/></linearGradient><linearGradient id="dbh" x1="8.5" y1="0" x2="44.5" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8c8c8c"/><stop offset="1" stop-color="#0e0f0f"/></linearGradient><filter id="dbs" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="1.4"/></filter><filter id="dbg" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.2"/></filter></defs>
+<g transform="matrix(-1 0 0 1 105 0)"><path d="M53 3.5L7.5 3.5Q6.5 3.5 5.79 4.21L5.5 4.5Q4.5 5.5 4.5 7L4.5 32.5Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#dbp)"/>
+<path d="M53 33.5L4.5 33.5L4.5 34.5Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#dbl)"/>
+<path d="M53 5.5H7" stroke="#8c8c8c" stroke-opacity="0.35"/>
+<path d="M53 3.5L7.5 3.5Q6.5 3.5 5.79 4.21L5.5 4.5Q4.5 5.5 4.5 7L4.5 32.5Q4.5 35.5 7.5 35.5L53 35.5" fill="none" stroke="#0e0f0f"/>
+<path d="M53 3.5L7.5 3.5Q6.5 3.5 5.79 4.21L5.5 4.5Q4.5 5.5 4.5 7L4.5 32.5Q4.5 35.5 7.5 35.5L53 35.5" fill="none" stroke="#11505e" stroke-opacity="1"/></g>
+<path d="M5.5 35.5L46.5 35.5L8.5 42L5.5 40.5Z" fill="#000000" opacity="0.6" filter="url(#dbs)"/>
+<path d="M53 3.5L9.5 1.54Q8.5 1.5 7.7 2.1L5.7 3.6Q4.5 4.5 4.5 6L4.5 32.5Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#dbp)"/>
+<path d="M53 3.5L9.5 1.54Q8.5 1.5 7.7 2.1L5.7 3.6Q4.5 4.5 4.5 6L4.5 32.5Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#dbr)" opacity="1"/>
+<path d="M53 3.5L9.5 1.54Q8.5 1.5 8.5 2.5L8.5 29.5L53 33.5Z" fill="url(#dbt)" opacity="1"/>
+<path d="M53 33.5L4.5 33.5L4.5 34.5Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#dbl)"/>
+<path d="M53 33.5L8.5 29.5L4.5 30.5L4.5 33Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#dbf)" opacity="1"/>
+<path d="M8.5 2.5Q8.5 1.5 7.7 2.1L5.7 3.6Q4.5 4.5 4.5 6L4.5 30.5L8.5 29.5Z" fill="url(#dbe)" opacity="1"/>
+<path d="M8.5 2.5V29.5" stroke="#8c8c8c" stroke-opacity="0.6"/>
+<path d="M53 3.5L9.5 1.54Q8.5 1.5 7.7 2.1L5.7 3.6Q4.5 4.5 4.5 6L4.5 32.5Q4.5 35.5 7.5 35.5L53 35.5" fill="none" stroke="#0e0f0f"/>
+<path d="M53 3.5L8.5 1.5" stroke="url(#dbh)" stroke-opacity="1"/>
+<g transform="rotate(5 27.5 17.5)"><text x="27.5" y="22.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" letter-spacing="0.5" fill="#262626">AUS</text></g>
+<text x="80" y="25" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" letter-spacing="0.5" fill="#00ccff" opacity="0.55" filter="url(#dbg)">EIN</text><text x="80" y="25" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" letter-spacing="0.5" fill="#00ccff">EIN</text>
 </g>
 <text x="16" y="110" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#555555">OFF</text>
 <g transform="translate(16 116)">
-<defs><linearGradient id="lar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dedede"/><stop offset="1" stop-color="#9a9a9a"/></linearGradient><linearGradient id="lap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bdbdbd"/><stop offset="1" stop-color="#8a8a8a"/></linearGradient><filter id="lag" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.2"/></filter></defs>
-
-<rect x="50.5" y="5.5" width="4" height="33" rx="1.5" fill="#6a6a6a"/>
-<rect x="3.5" y="7" width="48" height="31.5" rx="5" fill="url(#lap)" stroke="#5b5c5c"/>
-
-<text x="28" y="28.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#5f5f5f">AUS</text>
-<rect x="53.5" y="5.5" width="48" height="33" rx="5" fill="url(#lar)" stroke="#5b5c5c"/>
-<path d="M56.5 7.5h42" stroke="#ffffff" stroke-opacity="0.35" stroke-linecap="round"/>
-<text x="77" y="27.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#5f5f5f">EIN</text>
+<defs><linearGradient id="lap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bfbfbf"/><stop offset="1" stop-color="#959595"/></linearGradient><linearGradient id="lar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c8c8c8"/><stop offset="1" stop-color="#a1a1a1"/></linearGradient><linearGradient id="lae" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8f8f8f"/><stop offset="1" stop-color="#858585"/></linearGradient><linearGradient id="laf" x1="0" y1="29.5" x2="0" y2="35.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#858585"/><stop offset="1" stop-color="#5a5a5a"/></linearGradient><linearGradient id="lal" x1="0" y1="33.5" x2="0" y2="35.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5c5c5c"/><stop offset="1" stop-color="#666666"/></linearGradient><linearGradient id="lat" x1="8.5" y1="0" x2="52.5" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-opacity="0"/><stop offset="1" stop-opacity="0.1"/></linearGradient><linearGradient id="lah" x1="8.5" y1="0" x2="44.5" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f4f4f4"/><stop offset="1" stop-color="#5b5c5c"/></linearGradient><filter id="las" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="1.4"/></filter><filter id="lag" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.2"/></filter></defs>
+<path d="M53 3.5L7.5 3.5Q6.5 3.5 5.79 4.21L5.5 4.5Q4.5 5.5 4.5 7L4.5 32.5Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#lap)"/>
+<path d="M53 33.5L4.5 33.5L4.5 34.5Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#lal)"/>
+<path d="M53 5.5H7" stroke="#f4f4f4" stroke-opacity="0.7"/>
+<path d="M53 3.5L7.5 3.5Q6.5 3.5 5.79 4.21L5.5 4.5Q4.5 5.5 4.5 7L4.5 32.5Q4.5 35.5 7.5 35.5L53 35.5" fill="none" stroke="#5b5c5c"/>
+<g transform="matrix(-1 0 0 1 105 0)"><path d="M5.5 35.5L46.5 35.5L8.5 42L5.5 40.5Z" fill="#000000" opacity="0.45" filter="url(#las)"/>
+<path d="M53 3.5L9.5 1.54Q8.5 1.5 7.7 2.1L5.7 3.6Q4.5 4.5 4.5 6L4.5 32.5Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#lap)"/>
+<path d="M53 3.5L9.5 1.54Q8.5 1.5 7.7 2.1L5.7 3.6Q4.5 4.5 4.5 6L4.5 32.5Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#lar)" opacity="1"/>
+<path d="M53 3.5L9.5 1.54Q8.5 1.5 8.5 2.5L8.5 29.5L53 33.5Z" fill="url(#lat)" opacity="1"/>
+<path d="M53 33.5L4.5 33.5L4.5 34.5Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#lal)"/>
+<path d="M53 33.5L8.5 29.5L4.5 30.5L4.5 33Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#laf)" opacity="1"/>
+<path d="M8.5 2.5Q8.5 1.5 7.7 2.1L5.7 3.6Q4.5 4.5 4.5 6L4.5 30.5L8.5 29.5Z" fill="url(#lae)" opacity="1"/>
+<path d="M8.5 2.5V29.5" stroke="#f4f4f4" stroke-opacity="0.6"/>
+<path d="M53 3.5L9.5 1.54Q8.5 1.5 7.7 2.1L5.7 3.6Q4.5 4.5 4.5 6L4.5 32.5Q4.5 35.5 7.5 35.5L53 35.5" fill="none" stroke="#5b5c5c"/>
+<path d="M53 3.5L8.5 1.5" stroke="url(#lah)" stroke-opacity="1"/></g>
+<text x="25" y="25" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" letter-spacing="0.5" fill="#6e6e6e">AUS</text>
+<g transform="rotate(-5 77.5 17.5)"><text x="77.5" y="22.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" letter-spacing="0.5" fill="#6e6e6e">EIN</text></g>
 </g>
 <text x="139" y="110" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#555555">ON</text>
 <g transform="translate(139 116)">
-<defs><linearGradient id="lbr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dedede"/><stop offset="1" stop-color="#9a9a9a"/></linearGradient><linearGradient id="lbp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bdbdbd"/><stop offset="1" stop-color="#8a8a8a"/></linearGradient><filter id="lbg" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.2"/></filter></defs>
-
-<rect x="50.5" y="5.5" width="4" height="33" rx="1.5" fill="#6a6a6a"/>
-<rect x="3.5" y="5.5" width="48" height="33" rx="5" fill="url(#lbr)" stroke="#5b5c5c"/>
-<path d="M6.5 7.5h42" stroke="#ffffff" stroke-opacity="0.35" stroke-linecap="round"/>
-<text x="28" y="27.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#5f5f5f">AUS</text>
-<rect x="53.5" y="7" width="48" height="31.5" rx="5" fill="url(#lbp)" stroke="#5b5c5c"/>
-
-<text x="77" y="28.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#00a8c8" opacity="0.55" filter="url(#lbg)">EIN</text><text x="77" y="28.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#00a8c8">EIN</text>
+<defs><linearGradient id="lbp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bfbfbf"/><stop offset="1" stop-color="#959595"/></linearGradient><linearGradient id="lbr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c8c8c8"/><stop offset="1" stop-color="#a1a1a1"/></linearGradient><linearGradient id="lbe" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8f8f8f"/><stop offset="1" stop-color="#858585"/></linearGradient><linearGradient id="lbf" x1="0" y1="29.5" x2="0" y2="35.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#858585"/><stop offset="1" stop-color="#5a5a5a"/></linearGradient><linearGradient id="lbl" x1="0" y1="33.5" x2="0" y2="35.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5c5c5c"/><stop offset="1" stop-color="#666666"/></linearGradient><linearGradient id="lbt" x1="8.5" y1="0" x2="52.5" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-opacity="0"/><stop offset="1" stop-opacity="0.1"/></linearGradient><linearGradient id="lbh" x1="8.5" y1="0" x2="44.5" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f4f4f4"/><stop offset="1" stop-color="#5b5c5c"/></linearGradient><filter id="lbs" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="1.4"/></filter><filter id="lbg" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.2"/></filter></defs>
+<g transform="matrix(-1 0 0 1 105 0)"><path d="M53 3.5L7.5 3.5Q6.5 3.5 5.79 4.21L5.5 4.5Q4.5 5.5 4.5 7L4.5 32.5Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#lbp)"/>
+<path d="M53 33.5L4.5 33.5L4.5 34.5Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#lbl)"/>
+<path d="M53 5.5H7" stroke="#f4f4f4" stroke-opacity="0.7"/>
+<path d="M53 3.5L7.5 3.5Q6.5 3.5 5.79 4.21L5.5 4.5Q4.5 5.5 4.5 7L4.5 32.5Q4.5 35.5 7.5 35.5L53 35.5" fill="none" stroke="#5b5c5c"/>
+<path d="M53 3.5L7.5 3.5Q6.5 3.5 5.79 4.21L5.5 4.5Q4.5 5.5 4.5 7L4.5 32.5Q4.5 35.5 7.5 35.5L53 35.5" fill="none" stroke="#5f98a6" stroke-opacity="1"/></g>
+<path d="M5.5 35.5L46.5 35.5L8.5 42L5.5 40.5Z" fill="#000000" opacity="0.45" filter="url(#lbs)"/>
+<path d="M53 3.5L9.5 1.54Q8.5 1.5 7.7 2.1L5.7 3.6Q4.5 4.5 4.5 6L4.5 32.5Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#lbp)"/>
+<path d="M53 3.5L9.5 1.54Q8.5 1.5 7.7 2.1L5.7 3.6Q4.5 4.5 4.5 6L4.5 32.5Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#lbr)" opacity="1"/>
+<path d="M53 3.5L9.5 1.54Q8.5 1.5 8.5 2.5L8.5 29.5L53 33.5Z" fill="url(#lbt)" opacity="1"/>
+<path d="M53 33.5L4.5 33.5L4.5 34.5Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#lbl)"/>
+<path d="M53 33.5L8.5 29.5L4.5 30.5L4.5 33Q4.5 35.5 7.5 35.5L53 35.5Z" fill="url(#lbf)" opacity="1"/>
+<path d="M8.5 2.5Q8.5 1.5 7.7 2.1L5.7 3.6Q4.5 4.5 4.5 6L4.5 30.5L8.5 29.5Z" fill="url(#lbe)" opacity="1"/>
+<path d="M8.5 2.5V29.5" stroke="#f4f4f4" stroke-opacity="0.6"/>
+<path d="M53 3.5L9.5 1.54Q8.5 1.5 7.7 2.1L5.7 3.6Q4.5 4.5 4.5 6L4.5 32.5Q4.5 35.5 7.5 35.5L53 35.5" fill="none" stroke="#5b5c5c"/>
+<path d="M53 3.5L8.5 1.5" stroke="url(#lbh)" stroke-opacity="1"/>
+<g transform="rotate(5 27.5 17.5)"><text x="27.5" y="22.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" letter-spacing="0.5" fill="#6e6e6e">AUS</text></g>
+<text x="80" y="25" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" letter-spacing="0.5" fill="#00a8c8" opacity="0.55" filter="url(#lbg)">EIN</text><text x="80" y="25" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" letter-spacing="0.5" fill="#00a8c8">EIN</text>
 </g>
 </svg>

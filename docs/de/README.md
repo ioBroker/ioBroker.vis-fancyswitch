@@ -1,6 +1,6 @@
 # fancyswitch für vis-2
 
-Das Set fancyswitch enthält sieben Widgets, um einen Zustand ein- und auszuschalten: vier Schieber, eine Wippe,
+Das Set fancyswitch enthält sieben Widgets, um einen Zustand ein- und auszuschalten: drei Schieber, zwei Wippen,
 den Giva Labs iButton und einen kleinen Umschalter. Diese Seite beschreibt die Version für **vis-2**. vis
 (vis-1) hat dieselben Widgets mit denselben Einstellungen; dort werden sie aus Bildern gezeichnet und werden
 beim Vergrößern unscharf.
@@ -81,8 +81,9 @@ mittig in seinem Rahmen.
 
 ![Schalter hell](../img/switch1.svg)
 
-Der helle Schalter. Beide Beschriftungen bleiben sichtbar, und die erhabene Taste steht auf der Hälfte des
-aktuellen Zustands.
+Die helle Wippe: eine Taste, die in der Mitte gelagert ist. Die Hälfte des aktuellen Zustands ist
+heruntergedrückt, die andere steht zum Betrachter hin hoch und wirft einen Schatten; beim Umschalten kippt die
+Taste um. Beide Beschriftungen bleiben sichtbar; hier leuchtet nichts.
 
 Einstellungen: siehe [Gemeinsame Einstellungen der fünf Schalterstile](#gemeinsame-einstellungen-der-fünf-schalterstile).
 
@@ -90,8 +91,10 @@ Einstellungen: siehe [Gemeinsame Einstellungen der fünf Schalterstile](#gemeins
 
 ![Schieber dunkel](../img/switch2.svg)
 
-Der dunkle Schieber auf einer dunklen Platte. Die Taste wird auf die andere Hälfte geschoben, sodass die
-Beschriftung des aktuellen Zustands sichtbar wird; `ON` leuchtet dabei cyan.
+Der dunkle Schieber auf einer dunklen Platte. Der Griff und beide Beschriftungen sitzen auf einem Streifen, der
+wie bei einem echten Schiebeschalter hinter dem Rahmen gleitet: Die Beschriftung des aktuellen Zustands ist
+sichtbar, die andere verschwindet unter dem Rahmen. Beim Umschalten gleitet der Streifen hinüber. `ON` leuchtet
+cyan. Die Beschriftungen können beliebige kurze Texte sein, zum Beispiel `0` und `I`.
 
 Einstellungen: siehe [Gemeinsame Einstellungen der fünf Schalterstile](#gemeinsame-einstellungen-der-fünf-schalterstile).
 
@@ -115,8 +118,9 @@ Einstellungen: siehe [Gemeinsame Einstellungen der fünf Schalterstile](#gemeins
 
 ![Wippe](../img/rocker.svg)
 
-Zwei Tasten nebeneinander; die Taste des aktuellen Zustands ist heruntergedrückt, und die Ein-Taste leuchtet
-cyan, solange sie aktiv ist. Oben der dunkle Stil, unten der helle.
+Eine in der Mitte gelagerte Taste wie beim [hellen Schalter](#schalter-hell---tplfancyswitch1): Die Hälfte des
+aktuellen Zustands ist heruntergedrückt, die andere steht hoch. Beim Umschalten kippt die Taste über ihre
+Mittelstellung. Die Ein-Hälfte leuchtet cyan, solange sie gedrückt ist. Oben der dunkle Stil, unten der helle.
 
 Zusätzlich zu den [gemeinsamen Einstellungen](#gemeinsame-einstellungen-der-fünf-schalterstile):
 
@@ -169,6 +173,8 @@ vis-2-Designs und funktioniert damit auch im dunklen Design.
 - Die Widgets werden als SVG gezeichnet, statt aus einem PNG ausgeschnitten zu werden, und lassen sich daher
   frei vergrößern.
 - Die Beschriftungen der fünf Schalterstile sind jetzt Einstellungen; in vis-1 waren sie Teil des Bildes.
+- Die Schalter bewegen sich beim Umschalten: Die Schieber gleiten hinüber, ihre Beschriftungen mit dem Griff,
+  und die Wippen kippen über ihre Mittelstellung. In vis-1 sprang das Bild.
 - Ein Boolean-Zustand wird als "ein" erkannt, wenn der _Wahr-Wert_ auf der Vorgabe `1` steht. In vis-1 wurde ein
   `true` mit dem Text `1` verglichen und passte nie, sodass ein solches Widget dauerhaft aus blieb.
 - Bei _Schieber dunkel EIN/AUS_ schalten beide Hälften in den Zustand, den ihre Beschriftung zeigt. In vis-1
